@@ -1,7 +1,8 @@
-import Link from "next/link"
-import Image from "next/image"
-import { ChevronRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import Link from "next/link";
+import Image from "next/image";
+import { ChevronRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import ProductCard from "@/components/pages/home/ProductCard";
 
 export default function Home() {
   return (
@@ -9,83 +10,154 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-[80vh] w-full overflow-hidden">
         <Image
-          src="/placeholder.svg?height=1080&width=1920"
+          src="/home-cover.jpg"
           alt="Hero Image"
           fill
-          className="object-cover brightness-75"
+          className="object-cover brightness-100"
           priority
         />
-        <div className="absolute inset-0 flex flex-col justify-center items-start p-6 md:p-12 lg:p-24 bg-gradient-to-r from-black/70 to-transparent">
+        <div className="absolute flex justify-center items-end inset-0 p-6 md:p-8 lg:p-16 bg-gradient-to-r from-black/70 to-transparent">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4">
-            OVERSIZED <br /> REDEFINED
+            Premium Oversized
           </h1>
-          <p className="text-lg md:text-xl text-white/90 max-w-md mb-8">
+          
+          {/* <p className="text-lg md:text-xl text-white/90 max-w-md mb-8">
             Experience comfort and style with our premium oversized t-shirts
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          </p> */}
+          {/* <div className="flex flex-col sm:flex-row gap-4">
             <Button size="lg" className="bg-white text-black hover:bg-white/90">
               SHOP MEN
             </Button>
             <Button size="lg" className="bg-white text-black hover:bg-white/90">
               SHOP WOMEN
             </Button>
-          </div>
+          </div> */}
         </div>
       </section>
 
       {/* Featured Collection */}
-      <section className="py-16 px-6 md:px-12 lg:px-24 bg-white">
-        <div className="flex justify-between items-center mb-8">
-          <h2 className="text-2xl md:text-3xl font-bold">FEATURED COLLECTION</h2>
-          <Link href="/products" className="flex items-center text-sm font-medium hover:underline">
+      <section className="pt-8 px-2 md:px-12 lg:px-24 bg-white">
+        <div className="flex justify-between items-center mb-4 md:mb-8 lg:mb-8">
+          <h2 className="text-md md:text-3xl font-bold">NEW ARRIVALS</h2>
+          <Link
+            href="/products"
+            className="flex items-center text-sm font-medium hover:underline"
+          >
             VIEW ALL <ChevronRight className="h-4 w-4 ml-1" />
           </Link>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 md:gap-6 lg:gap-6 xl:gap-6 gap-2">
+          {newArrivalsProducts.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
+      </section>
+
+      {/* Featured Collection */}
+      <section className="pt-8 px-2 md:px-12 lg:px-24 bg-white">
+        <div className="flex justify-between items-center mb-4 md:mb-8 lg:mb-8">
+          <h2 className="text-md md:text-3xl font-bold">FEATURED COLLECTION</h2>
+          <Link
+            href="/products"
+            className="flex items-center text-sm font-medium hover:underline"
+          >
+            VIEW ALL <ChevronRight className="h-4 w-4 ml-1" />
+          </Link>
+        </div>
+        {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {featuredProducts.map((product) => {
+            const hasDiscount =
+              product.discountPrice && product.discountPrice < product.price;
+            const discountPercentage = hasDiscount
+              ? Math.round(
+                  ((product.price - product.discountPrice) / product.price) *
+                    100
+                )
+              : 0;
+
+            return (
+              <Link
+                href={`/products/${product.id}`}
+                key={product.id}
+                className="group"
+              >
+                <div className="relative aspect-[3/4] overflow-hidden bg-gray-100 rounded-xl shadow-md transition-all duration-300 hover:shadow-lg">
+                  <Image
+                    src={product.image || "/placeholder.svg"}
+                    alt={product.name}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  {product.isNew && (
+                    <div className="absolute top-2 left-2 bg-black text-white text-xs px-3 py-1 rounded-full">
+                      NEW
+                    </div>
+                  )}
+                  {hasDiscount && (
+                    <div className="absolute top-2 right-2 bg-red-500 text-white text-xs px-3 py-1 rounded-full">
+                      -{discountPercentage}%
+                    </div>
+                  )}
+                </div>
+                <h3 className="font-medium text-lg mt-2">{product.name}</h3>
+                <p className="text-gray-600 text-sm">{product.category}</p>
+                <div className="mt-1 flex items-center space-x-2">
+                  {hasDiscount ? (
+                    <>
+                      <span className="text-gray-500 line-through text-sm">
+                        {product.price}
+                      </span>
+                      <span className="font-bold text-red-500 text-lg">
+                        {product.discountPrice}
+                      </span>
+                    </>
+                  ) : (
+                    <span className="font-bold text-lg">{product.price}</span>
+                  )}
+                </div>
+              </Link>
+            );
+          })}
+        </div> */}
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 md:gap-6 lg:gap-6 xl:gap-6 gap-2">
           {featuredProducts.map((product) => (
-            <Link href={`/products/${product.id}`} key={product.id} className="group">
-              <div className="relative aspect-[3/4] overflow-hidden bg-gray-100 mb-4">
-                <Image
-                  src={product.image || "/placeholder.svg"}
-                  alt={product.name}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                {product.isNew && (
-                  <div className="absolute top-2 left-2 bg-black text-white text-xs px-2 py-1">NEW</div>
-                )}
-              </div>
-              <h3 className="font-medium mb-1">{product.name}</h3>
-              <p className="text-gray-700 mb-1">{product.category}</p>
-              <p className="font-bold">${product.price}</p>
-            </Link>
+            <ProductCard key={product.id} product={product} />
           ))}
         </div>
       </section>
 
       {/* Brand Story */}
-      <section className="py-16 px-6 md:px-12 lg:px-24 bg-gray-100">
+      <section className="py-16 px-6 md:px-12 lg:px-24 bg-gray-50">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-2xl md:text-3xl font-bold mb-6">OUR STORY</h2>
-            <p className="text-gray-700 mb-6">
-              Funcy Fabric was born from a passion for comfort and style. We believe that clothing should be an
-              expression of individuality, and our oversized t-shirts provide the perfect canvas for self-expression.
+          <div className="max-w-lg">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Our Story
+            </h2>
+            <p className="text-gray-700 leading-relaxed mb-6">
+              Funcy Fabric was born from a passion for comfort and style. We
+              believe that clothing should be an expression of individuality,
+              and our oversized t-shirts provide the perfect canvas for
+              self-expression.
             </p>
-            <p className="text-gray-700 mb-6">
-              Each piece is crafted with premium materials and attention to detail, ensuring that you not only look good
-              but feel good too. Our commitment to quality and sustainability drives everything we do.
+            <p className="text-gray-700 leading-relaxed mb-6">
+              Each piece is crafted with premium materials and attention to
+              detail, ensuring that you not only look good but feel good too.
+              Our commitment to quality and sustainability drives everything we
+              do.
             </p>
-            <Button variant="outline" className="border-black text-black hover:bg-black hover:text-white">
-              LEARN MORE
+            <Button
+              variant="outline"
+              className="border-black text-black px-6 py-2 rounded-lg transition-all hover:bg-black hover:text-white"
+            >
+              Learn More
             </Button>
           </div>
-          <div className="relative aspect-square">
+          <div className="relative w-full h-80 md:h-[400px] rounded-lg overflow-hidden">
             <Image
-              src="/placeholder.svg?height=800&width=800"
+              src="/my-journey.jpg"
               alt="Brand Story"
               fill
-              className="object-cover rounded-lg"
+              className="object-cover"
             />
           </div>
         </div>
@@ -93,8 +165,10 @@ export default function Home() {
 
       {/* Categories */}
       <section className="py-16 px-6 md:px-12 lg:px-24 bg-white">
-        <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">SHOP BY CATEGORY</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <h2 className="text-xl md:text-3xl font-bold mb-8 text-center">
+          SHOP BY CATEGORY
+        </h2>
+        <div className="grid grid-cols-3 sm:grid-cols-3 gap-6">
           {categories.map((category) => (
             <Link
               href={`/products?category=${category.slug}`}
@@ -108,7 +182,9 @@ export default function Home() {
                 className="object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
-                <h3 className="text-white text-2xl font-bold">{category.name}</h3>
+                <h3 className="text-white text-md md:text-2xl xl:text-2xl font-bold">
+                  {category.name}
+                </h3>
               </div>
             </Link>
           ))}
@@ -118,8 +194,13 @@ export default function Home() {
       {/* Newsletter */}
       <section className="py-16 px-6 md:px-12 lg:px-24 bg-black text-white">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">JOIN THE FUNCY FAMILY</h2>
-          <p className="mb-8">Subscribe to our newsletter for exclusive offers, new releases, and more.</p>
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            JOIN THE FUNCY FAMILY
+          </h2>
+          <p className="mb-8">
+            Subscribe to our newsletter for exclusive offers, new releases, and
+            more.
+          </p>
           <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <input
               type="email"
@@ -127,64 +208,109 @@ export default function Home() {
               className="flex-1 px-4 py-3 bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-white/50"
               required
             />
-            <Button className="bg-white text-black hover:bg-white/90">SUBSCRIBE</Button>
+            <Button className="bg-white text-black hover:bg-white/90">
+              SUBSCRIBE
+            </Button>
           </form>
         </div>
       </section>
     </div>
-  )
+  );
 }
+
+const newArrivalsProducts = [
+  {
+    id: "1",
+    name: "Classic Oversized Black",
+    category: "Men",
+    price: 499,
+    discountPrice: 399,
+    image: "/newArrivals/1.jpg",
+    isNew: false,
+  },
+  {
+    id: "2",
+    name: "Plain Oversized Pink",
+    category: "Women",
+    price: 499,
+    discountPrice: 399,
+    image: "/newArrivals/2.jpg",
+    isNew: false,
+  },
+  {
+    id: "3",
+    name: "Plain Oversized Red",
+    category: "Men",
+    price: 499,
+    discountPrice: 399,
+    image: "/newArrivals/3.jpg",
+    isNew: false,
+  },
+  {
+    id: "4",
+    name: "Graphic Print Tee",
+    category: "Women",
+    price: 499,
+    discountPrice: 399,
+    image: "/newArrivals/4.jpg",
+    isNew: false,
+  },
+];
 
 // Static data for frontend
 const featuredProducts = [
   {
     id: "1",
-    name: "Classic Oversized Tee",
+    name: "Classic Oversized Black",
     category: "Men",
-    price: 49.99,
-    image: "/placeholder.svg?height=600&width=450",
+    price: 499,
+    discountPrice: 399,
+    image: "/featureProducts/1.jpg",
     isNew: true,
   },
   {
     id: "2",
-    name: "Urban Boxy Fit",
+    name: "Plain Oversized Pink",
     category: "Women",
-    price: 54.99,
-    image: "/placeholder.svg?height=600&width=450",
-    isNew: false,
+    price: 499,
+    discountPrice: 399,
+    image: "/featureProducts/2.jpg",
+    isNew: true,
   },
   {
     id: "3",
-    name: "Vintage Wash Oversized",
+    name: "Plain Oversized Red",
     category: "Men",
-    price: 59.99,
-    image: "/placeholder.svg?height=600&width=450",
+    price: 499,
+    discountPrice: 399,
+    image: "/featureProducts/3.jpg",
     isNew: true,
   },
   {
     id: "4",
     name: "Graphic Print Tee",
     category: "Women",
-    price: 64.99,
-    image: "/placeholder.svg?height=600&width=450",
-    isNew: false,
+    price: 499,
+    discountPrice: 399,
+    image: "/featureProducts/4.jpg",
+    isNew: true,
   },
-]
+];
 
 const categories = [
   {
     name: "MEN",
     slug: "men",
-    image: "/placeholder.svg?height=800&width=600",
+    image: "/men.jpg",
   },
   {
     name: "WOMEN",
     slug: "women",
-    image: "/placeholder.svg?height=800&width=600",
+    image: "/women.jpg",
   },
   {
-    name: "ACCESSORIES",
-    slug: "accessories",
-    image: "/placeholder.svg?height=800&width=600",
+    name: "All",
+    slug: "all",
+    image: "/all.jpg",
   },
-]
+];
