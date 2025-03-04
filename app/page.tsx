@@ -20,7 +20,7 @@ export default function Home() {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4">
             Premium Oversized
           </h1>
-          
+
           {/* <p className="text-lg md:text-xl text-white/90 max-w-md mb-8">
             Experience comfort and style with our premium oversized t-shirts
           </p> */}
@@ -220,40 +220,40 @@ export default function Home() {
 
 const newArrivalsProducts = [
   {
-    id: "1",
-    name: "Classic Oversized Black",
+    id: "5",
+    name: "Classic Oversized Grey",
     category: "Men",
     price: 499,
     discountPrice: 399,
-    image: "/newArrivals/1.jpg",
-    isNew: false,
+    image: "/newArrivals/5.jpg",
+    isNew: true,
   },
   {
-    id: "2",
-    name: "Plain Oversized Pink",
+    id: "6",
+    name: "Pretty Oversized White",
     category: "Women",
     price: 499,
     discountPrice: 399,
-    image: "/newArrivals/2.jpg",
-    isNew: false,
+    image: "/newArrivals/6.jpg",
+    isNew: true,
   },
   {
-    id: "3",
-    name: "Plain Oversized Red",
+    id: "7",
+    name: "Amazing Oversized Blue",
     category: "Men",
     price: 499,
     discountPrice: 399,
-    image: "/newArrivals/3.jpg",
-    isNew: false,
+    image: "/newArrivals/7.jpg",
+    isNew: true,
   },
   {
-    id: "4",
-    name: "Graphic Print Tee",
+    id: "8",
+    name: "Cute Oversized Green",
     category: "Women",
     price: 499,
     discountPrice: 399,
-    image: "/newArrivals/4.jpg",
-    isNew: false,
+    image: "/newArrivals/8.jpg",
+    isNew: true,
   },
 ];
 

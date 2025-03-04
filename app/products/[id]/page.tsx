@@ -1,60 +1,29 @@
-import Image from "next/image"
-import Link from "next/link"
-import { ChevronRight, Heart, Share2, ShoppingBag } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+import { ChevronRight, Heart, Share2, ShoppingBag } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import allProductData from "../../../data/allProduct.json";
+import { useEffect, useState } from "react";
+import ProductCard from "@/components/pages/home/ProductCard";
 
-export default function ProductPage({ params }: { params: { id: string } }) {
+export default function ProductPage({ params }: { params: { id: any } }) {
   // In a real app, you would fetch the product data based on the ID
   // For now, we'll use static data
-  const product = {
-    id: params.id,
-    name: "Classic Oversized Tee",
-    category: "Men",
-    price: 49.99,
-    description:
-      "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
-    features: [
-      "100% Premium Cotton",
-      "Relaxed, oversized fit",
-      "Dropped shoulders",
-      "Ribbed crew neck",
-      "Machine washable",
-    ],
-    colors: ["Black", "White", "Gray", "Navy"],
-    sizes: ["S", "M", "L", "XL", "XXL"],
-    images: [
-      "/placeholder.svg?height=800&width=600",
-      "/placeholder.svg?height=800&width=600",
-      "/placeholder.svg?height=800&width=600",
-      "/placeholder.svg?height=800&width=600",
-    ],
-    relatedProducts: [
-      {
-        id: "2",
-        name: "Urban Boxy Fit",
-        category: "Women",
-        price: 54.99,
-        image: "/placeholder.svg?height=600&width=450",
-      },
-      {
-        id: "3",
-        name: "Vintage Wash Oversized",
-        category: "Men",
-        price: 59.99,
-        image: "/placeholder.svg?height=600&width=450",
-      },
-      {
-        id: "4",
-        name: "Graphic Print Tee",
-        category: "Women",
-        price: 64.99,
-        image: "/placeholder.svg?height=600&width=450",
-      },
-    ],
-  }
 
+  const [product, setProduct] = useState({});
+  useEffect(() => {
+    setProduct(allProductData.filter((item) => item.id == params.id)[0]);
+    console.log(params.id);
+  }, []);
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Breadcrumbs */}
@@ -67,7 +36,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
           Products
         </Link>
         <ChevronRight className="h-4 w-4 mx-2 text-gray-400" />
-        <span className="font-medium">{product.name}</span>
+        <span className="font-medium">{product?.name}</span>
       </div>
 
       {/* Product Details */}
@@ -76,22 +45,27 @@ export default function ProductPage({ params }: { params: { id: string } }) {
         <div className="space-y-4">
           <div className="relative aspect-square overflow-hidden bg-gray-100">
             <Image
-              src={product.images[0] || "/placeholder.svg"}
-              alt={product.name}
+              src={product?.image || "/placeholder.svg"}
+              alt={product?.name || "Unkown"}
               fill
               className="object-cover"
               priority
             />
           </div>
           <div className="grid grid-cols-4 gap-2">
-            {product.images.map((image, index) => (
-              <div key={index} className="relative aspect-square overflow-hidden bg-gray-100 cursor-pointer">
-                <Image
-                  src={image || "/placeholder.svg"}
-                  alt={`${product.name} ${index + 1}`}
-                  fill
-                  className="object-cover"
-                />
+            {product?.images?.map((image, index) => (
+              <div
+                key={index}
+                className="relative aspect-square overflow-hidden bg-gray-100 cursor-pointer"
+              >
+                <Link href={`/products/${image.id}`}>
+                  <Image
+                    src={image.image || "/placeholder.svg"}
+                    alt={`${image.name} ${index + 1}`}
+                    fill
+                    className="object-cover"
+                  />
+                </Link>
               </div>
             ))}
           </div>
@@ -100,25 +74,36 @@ export default function ProductPage({ params }: { params: { id: string } }) {
         {/* Product Info */}
         <div className="space-y-6">
           <div>
-            <h1 className="text-3xl font-bold mb-2">{product.name}</h1>
-            <p className="text-gray-500 mb-4">{product.category}</p>
-            <p className="text-2xl font-bold">${product.price}</p>
+            <h1 className="text-3xl font-bold mb-2">{product?.name}</h1>
+            <p className="text-gray-500 mb-4">{product?.category}</p>
+            <p className="text-2xl font-bold">{product?.discountPrice}</p>
           </div>
 
           <div className="space-y-4">
             <div>
               <h3 className="font-medium mb-2">Color</h3>
               <div className="flex space-x-2">
-                {product.colors.map((color) => (
+                {product?.colors?.map((color) => (
                   <div
                     key={color}
                     className="w-8 h-8 rounded-full border border-gray-300 cursor-pointer flex items-center justify-center"
-                    style={{ backgroundColor: color.toLowerCase() === "white" ? "white" : "" }}
+                    style={{
+                      backgroundColor:
+                        color.toLowerCase() === "white" ? "white" : "",
+                    }}
                   >
-                    {color.toLowerCase() === "black" && <div className="w-6 h-6 rounded-full bg-black"></div>}
-                    {color.toLowerCase() === "white" && <div className="w-6 h-6 rounded-full bg-white"></div>}
-                    {color.toLowerCase() === "gray" && <div className="w-6 h-6 rounded-full bg-gray-400"></div>}
-                    {color.toLowerCase() === "navy" && <div className="w-6 h-6 rounded-full bg-blue-900"></div>}
+                    {color.toLowerCase() === "black" && (
+                      <div className="w-6 h-6 rounded-full bg-black"></div>
+                    )}
+                    {color.toLowerCase() === "white" && (
+                      <div className="w-6 h-6 rounded-full bg-white"></div>
+                    )}
+                    {color.toLowerCase() === "gray" && (
+                      <div className="w-6 h-6 rounded-full bg-gray-400"></div>
+                    )}
+                    {color.toLowerCase() === "navy" && (
+                      <div className="w-6 h-6 rounded-full bg-blue-900"></div>
+                    )}
                   </div>
                 ))}
               </div>
@@ -131,14 +116,17 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                   <SelectValue placeholder="Select a size" />
                 </SelectTrigger>
                 <SelectContent>
-                  {product.sizes.map((size) => (
+                  {product?.sizes?.map((size) => (
                     <SelectItem key={size} value={size}>
                       {size}
                     </SelectItem>
                   ))}
                 </SelectContent>
               </Select>
-              <Link href="/size-guide" className="text-sm underline mt-2 inline-block">
+              <Link
+                href="/size-guide"
+                className="text-sm underline mt-2 inline-block"
+              >
                 Size Guide
               </Link>
             </div>
@@ -166,50 +154,58 @@ export default function ProductPage({ params }: { params: { id: string } }) {
               <TabsTrigger value="shipping">Shipping & Returns</TabsTrigger>
             </TabsList>
             <TabsContent value="description" className="pt-4">
-              <p className="text-gray-700">{product.description}</p>
+              <p className="text-gray-700">{product?.description}</p>
             </TabsContent>
             <TabsContent value="features" className="pt-4">
               <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                {product.features.map((feature, index) => (
+                {product?.features?.map((feature, index) => (
                   <li key={index}>{feature}</li>
                 ))}
               </ul>
             </TabsContent>
             <TabsContent value="shipping" className="pt-4">
               <div className="space-y-4 text-gray-700">
-                <p>Free standard shipping on all orders over $100.</p>
+                {/* <p>Free standard shipping on all orders over $100.</p>
                 <p>Express shipping available for an additional fee.</p>
                 <p>
-                  Returns accepted within 30 days of delivery. Item must be unworn, unwashed, and with original tags
-                  attached.
-                </p>
+                  Returns accepted within 30 days of delivery. Item must be
+                  unworn, unwashed, and with original tags attached.
+                </p> */}
+                {product?.shipping?.map((shipping, index) => (
+                  <p key={index}>{shipping}</p>
+                ))}
               </div>
             </TabsContent>
           </Tabs>
         </div>
       </div>
 
-      {/* Related Products */}
       <div className="py-12 border-t">
         <h2 className="text-2xl font-bold mb-8">You May Also Like</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {product.relatedProducts.map((relatedProduct) => (
-            <Link href={`/products/${relatedProduct.id}`} key={relatedProduct.id} className="group">
-              <div className="relative aspect-[3/4] overflow-hidden bg-gray-100 mb-4">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {product?.relatedProducts?.map((relatedProduct) => (
+            <Link
+              href={`/products/${relatedProduct.id}`}
+              key={relatedProduct.id}
+              className="group"
+            >
+              {/* <div className="relative aspect-[3/4] overflow-hidden bg-gray-100 mb-4">
                 <Image
-                  src={relatedProduct.image || "/placeholder.svg"}
-                  alt={relatedProduct.name}
+                  src={relatedProduct.src || "/placeholder.svg"}
+                  alt={relatedProduct?.name}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <h3 className="font-medium mb-1">{relatedProduct.name}</h3>
-              <p className="text-gray-700 mb-1">{relatedProduct.category}</p>
-              <p className="font-bold">${relatedProduct.price}</p>
+              <h3 className="font-medium mb-1">{relatedProduct?.name}</h3>
+              <p className="text-gray-700 mb-1">{relatedProduct?.category}</p>
+              <p className="font-bold">${relatedProduct?.price}</p> */}
+
+                <ProductCard product={relatedProduct} />
             </Link>
           ))}
         </div>
       </div>
     </div>
-  )
+  );
 }

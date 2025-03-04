@@ -1,0 +1,658 @@
+[
+  {
+    "id": 1,
+    "name": "Classic Oversized Black",
+    "category": "Men",
+    "price": 499,
+    "discountPrice": 399,
+    "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+    "image": "/featureProducts/1.jpg",
+    "isNew": false,
+    "features": [
+      "100% Premium Cotton",
+      "Relaxed, oversized fit",
+      "Dropped shoulders",
+      "Round neck",
+      "Machine washable"
+    ],
+    "shipping": [
+      "Free standard shipping on all orders over $100.",
+      "Express shipping available for an additional fee.",
+      "Returns accepted within 30 days of delivery. Item must beunworn, unwashed, and with original tags attached"
+    ],
+    "colors": ["Black", "White", "Gray", "Navy"],
+    "sizes": ["M", "L", "XL"],
+    "images": [
+      {
+        "id": "2",
+        "name": "Plain Oversized Pink",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/featureProducts/2.jpg",
+        "isNew": true
+      },
+      {
+        "id": "3",
+        "name": "Plain Oversized Red",
+        "category": "Men",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/featureProducts/3.jpg",
+        "isNew": true
+      },
+      {
+        "id": "4",
+        "name": "Graphic Print Tee",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/featureProducts/4.jpg",
+        "isNew": true
+      }
+    ],
+    "relatedProducts": [
+      {
+        "id": "2",
+        "name": "Plain Oversized Pink",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/featureProducts/2.jpg",
+        "isNew": false
+      },
+      {
+        "id": "3",
+        "name": "Plain Oversized Red",
+        "category": "Men",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/featureProducts/3.jpg",
+        "isNew": false
+      },
+      {
+        "id": "4",
+        "name": "Graphic Print Tee",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/featureProducts/4.jpg",
+        "isNew": false
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Pretty Oversize Pink",
+    "category": "Women",
+    "price": 499,
+    "discountPrice": 399,
+    "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+    "image": "/featureProducts/2.jpg",
+    "isNew": false,
+    "features": [
+      "100% Premium Cotton",
+      "Relaxed, oversized fit",
+      "Dropped shoulders",
+      "Round neck",
+      "Machine washable"
+    ],
+    "shipping": [
+      "Free standard shipping on all orders over $100.",
+      "Express shipping available for an additional fee.",
+      "Returns accepted within 30 days of delivery. Item must beunworn, unwashed, and with original tags attached"
+    ],
+    "colors": ["Black", "White", "Gray", "Navy"],
+    "sizes": ["M", "L", "XL"],
+    "images": [
+      {
+        "id": "1",
+        "name": "Classic Oversized Black",
+        "category": "Men",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/1.jpg",
+        "isNew": false
+      },
+      {
+        "id": "3",
+        "name": "Plain Oversized Red",
+        "category": "Men",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/3.jpg",
+        "isNew": false
+      },
+      {
+        "id": "4",
+        "name": "Graphic Print Tee",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/4.jpg",
+        "isNew": false
+      }
+    ],
+    "relatedProducts": [
+      {
+        "id": "1",
+        "name": "Classic Oversized Black",
+        "category": "Men",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/1.jpg",
+        "isNew": false
+      },
+      {
+        "id": "3",
+        "name": "Plain Oversized Red",
+        "category": "Men",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/3.jpg",
+        "isNew": false
+      },
+      {
+        "id": "4",
+        "name": "Graphic Print Tee",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/4.jpg",
+        "isNew": false
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Amazing Oversized Red",
+    "category": "Men",
+    "price": 499,
+    "discountPrice": 399,
+    "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+    "image": "/featureProducts/3.jpg",
+    "isNew": false,
+    "features": [
+      "100% Premium Cotton",
+      "Relaxed, oversized fit",
+      "Dropped shoulders",
+      "Round neck",
+      "Machine washable"
+    ],
+    "shipping": [
+      "Free standard shipping on all orders over $100.",
+      "Express shipping available for an additional fee.",
+      "Returns accepted within 30 days of delivery. Item must beunworn, unwashed, and with original tags attached"
+    ],
+    "colors": ["Black", "White", "Gray", "Navy"],
+    "sizes": ["M", "L", "XL"],
+    "images": [
+      {
+        "id": "2",
+        "name": "Plain Oversized Pink",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/2.jpg",
+        "isNew": false
+      },
+      {
+        "id": "4",
+        "name": "Graphic Print Tee",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/4.jpg",
+        "isNew": false
+      },
+      {
+        "id": "1",
+        "name": "Classic Oversized Black",
+        "category": "Men",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/1.jpg",
+        "isNew": false
+      }
+    ],
+    "relatedProducts": [
+      {
+        "id": "2",
+        "name": "Plain Oversized Pink",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/2.jpg",
+        "isNew": false
+      },
+      {
+        "id": "4",
+        "name": "Graphic Print Tee",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/4.jpg",
+        "isNew": false
+      },
+      {
+        "id": "1",
+        "name": "Classic Oversized Black",
+        "category": "Men",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/1.jpg",
+        "isNew": false
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Premium Oversized Black",
+    "category": "Women",
+    "price": 499,
+    "discountPrice": 399,
+    "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+    "image": "/featureProducts/4.jpg",
+    "isNew": false,
+    "features": [
+      "100% Premium Cotton",
+      "Relaxed, oversized fit",
+      "Dropped shoulders",
+      "Round neck",
+      "Machine washable"
+    ],
+    "shipping": [
+      "Free standard shipping on all orders over $100.",
+      "Express shipping available for an additional fee.",
+      "Returns accepted within 30 days of delivery. Item must beunworn, unwashed, and with original tags attached"
+    ],
+    "colors": ["Black", "White", "Gray", "Navy"],
+    "sizes": ["M", "L", "XL"],
+    "images": [
+      {
+        "id": "1",
+        "name": "Classic Oversized Black",
+        "category": "Men",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/1.jpg",
+        "isNew": false
+      },
+      {
+        "id": "2",
+        "name": "Plain Oversized Pink",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/2.jpg",
+        "isNew": false
+      },
+      {
+        "id": "3",
+        "name": "Plain Oversized Red",
+        "category": "Men",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/3.jpg",
+        "isNew": false
+      }
+    ],
+    "relatedProducts": [
+      {
+        "id": "1",
+        "name": "Classic Oversized Black",
+        "category": "Men",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/1.jpg",
+        "isNew": false
+      },
+      {
+        "id": "2",
+        "name": "Plain Oversized Pink",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/2.jpg",
+        "isNew": false
+      },
+      {
+        "id": "3",
+        "name": "Plain Oversized Red",
+        "category": "Men",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/3.jpg",
+        "isNew": false
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Classic Oversized Grey",
+    "category": "Men",
+    "price": 499,
+    "discountPrice": 399,
+    "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+    "image": "/newArrivals/5.jpg",
+    "isNew": true,
+    "features": [
+      "100% Premium Cotton",
+      "Relaxed, oversized fit",
+      "Dropped shoulders",
+      "Round neck",
+      "Machine washable"
+    ],
+    "shipping": [
+      "Free standard shipping on all orders over $100.",
+      "Express shipping available for an additional fee.",
+      "Returns accepted within 30 days of delivery. Item must beunworn, unwashed, and with original tags attached"
+    ],
+    "colors": ["Black", "White", "Gray", "Navy"],
+    "sizes": ["M", "L", "XL"],
+    "images": [
+      {
+        "id": "6",
+        "name": "Plain Oversized Pink",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/6.jpg",
+        "isNew": true
+      },
+      {
+        "id": "7",
+        "name": "Plain Oversized Red",
+        "category": "Men",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/7.jpg",
+        "isNew": true
+      },
+      {
+        "id": "8",
+        "name": "Graphic Print Tee",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/8.jpg",
+        "isNew": true
+      }
+    ],
+    "relatedProducts": [
+      {
+        "id": "6",
+        "name": "Plain Oversized Pink",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/6.jpg",
+        "isNew": true
+      },
+      {
+        "id": "7",
+        "name": "Plain Oversized Red",
+        "category": "Men",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/7.jpg",
+        "isNew": true
+      },
+      {
+        "id": "8",
+        "name": "Graphic Print Tee",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/8.jpg",
+        "isNew": true
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Pretty Oversized White",
+    "category": "Women",
+    "price": 499,
+    "discountPrice": 399,
+    "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+    "image": "/newArrivals/6.jpg",
+    "isNew": true,
+    "features": [
+      "100% Premium Cotton",
+      "Relaxed, oversized fit",
+      "Dropped shoulders",
+      "Round neck",
+      "Machine washable"
+    ],
+    "shipping": [
+      "Free standard shipping on all orders over $100.",
+      "Express shipping available for an additional fee.",
+      "Returns accepted within 30 days of delivery. Item must beunworn, unwashed, and with original tags attached"
+    ],
+    "colors": ["Black", "White", "Gray", "Navy"],
+    "sizes": ["M", "L", "XL"],
+    "images": [
+      {
+        "id": "7",
+        "name": "Plain Oversized Red",
+        "category": "Men",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/7.jpg",
+        "isNew": true
+      },
+      {
+        "id": "8",
+        "name": "Graphic Print Tee",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/8.jpg",
+        "isNew": true
+      },
+      {
+        "id": "5",
+        "name": "Classic Oversized Grey",
+        "category": "Men",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/5.jpg",
+        "isNew": true
+      }
+    ],
+    "relatedProducts": [
+      {
+        "id": "7",
+        "name": "Plain Oversized Red",
+        "category": "Men",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/7.jpg",
+        "isNew": true
+      },
+      {
+        "id": "8",
+        "name": "Graphic Print Tee",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/8.jpg",
+        "isNew": true
+      },
+      {
+        "id": "5",
+        "name": "Classic Oversized Grey",
+        "category": "Men",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/5.jpg",
+        "isNew": true
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Amazing Oversized Bluee",
+    "category": "Men",
+    "price": 499,
+    "discountPrice": 399,
+    "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+    "image": "/newArrivals/7.jpg",
+    "isNew": true,
+    "features": [
+      "100% Premium Cotton",
+      "Relaxed, oversized fit",
+      "Dropped shoulders",
+      "Round neck",
+      "Machine washable"
+    ],
+    "shipping": [
+      "Free standard shipping on all orders over $100.",
+      "Express shipping available for an additional fee.",
+      "Returns accepted within 30 days of delivery. Item must beunworn, unwashed, and with original tags attached"
+    ],
+    "colors": ["Black", "White", "Gray", "Navy"],
+    "sizes": ["M", "L", "XL"],
+    "images": [
+      {
+        "id": "5",
+        "name": "Classic Oversized Grey",
+        "category": "Men",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/5.jpg",
+        "isNew": true
+      },
+      {
+        "id": "6",
+        "name": "Pretty Oversized White",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/6.jpg",
+        "isNew": true
+      },
+      {
+        "id": "8",
+        "name": "Cute Oversized Green",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/8.jpg",
+        "isNew": true
+      }
+    ],
+    "relatedProducts": [
+      {
+        "id": "5",
+        "name": "Classic Oversized Grey",
+        "category": "Men",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/5.jpg",
+        "isNew": true
+      },
+      {
+        "id": "6",
+        "name": "Pretty Oversized White",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/6.jpg",
+        "isNew": true
+      },
+      {
+        "id": "8",
+        "name": "Cute Oversized Green",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/8.jpg",
+        "isNew": true
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Cute Oversized Green",
+    "category": "Women",
+    "price": 499,
+    "discountPrice": 399,
+    "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+    "image": "/newArrivals/8.jpg",
+    "isNew": true,
+    "features": [
+      "100% Premium Cotton",
+      "Relaxed, oversized fit",
+      "Dropped shoulders",
+      "Round neck",
+      "Machine washable"
+    ],
+    "shipping": [
+      "Free standard shipping on all orders over $100.",
+      "Express shipping available for an additional fee.",
+      "Returns accepted within 30 days of delivery. Item must beunworn, unwashed, and with original tags attached"
+    ],
+    "colors": ["Black", "White", "Gray", "Navy"],
+    "sizes": ["M", "L", "XL"],
+    "images": [
+      {
+        "id": "5",
+        "name": "Classic Oversized Grey",
+        "category": "Men",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/5.jpg",
+        "isNew": true
+      },
+      {
+        "id": "6",
+        "name": "Pretty Oversized White",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/6.jpg",
+        "isNew": true
+      },
+      {
+        "id": "7",
+        "name": "Amazing Oversized Blue",
+        "category": "Men",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/7.jpg",
+        "isNew": true
+      }
+    ],
+    "relatedProducts": [
+      {
+        "id": "5",
+        "name": "Classic Oversized Grey",
+        "category": "Men",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/5.jpg",
+        "isNew": true
+      },
+      {
+        "id": "6",
+        "name": "Pretty Oversized White",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/6.jpg",
+        "isNew": true
+      },
+      {
+        "id": "7",
+        "name": "Amazing Oversized Blue",
+        "category": "Men",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/newArrivals/7.jpg",
+        "isNew": true
+      }
+    ]
+  }
+]
