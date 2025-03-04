@@ -19,7 +19,7 @@ export default function ProductPage({ params }: { params: { id: any } }) {
   // In a real app, you would fetch the product data based on the ID
   // For now, we'll use static data
 
-  const [product, setProduct] = useState({});
+  const [product, setProduct] = useState({} as any);
   useEffect(() => {
     setProduct(allProductData.filter((item) => item.id == params.id)[0]);
     console.log(params.id);
@@ -53,7 +53,7 @@ export default function ProductPage({ params }: { params: { id: any } }) {
             />
           </div>
           <div className="grid grid-cols-4 gap-2">
-            {product?.images?.map((image, index) => (
+            {product?.images?.map((image: any, index: any) => (
               <div
                 key={index}
                 className="relative aspect-square overflow-hidden bg-gray-100 cursor-pointer"
@@ -83,7 +83,7 @@ export default function ProductPage({ params }: { params: { id: any } }) {
             <div>
               <h3 className="font-medium mb-2">Color</h3>
               <div className="flex space-x-2">
-                {product?.colors?.map((color) => (
+                {product?.colors?.map((color: any) => (
                   <div
                     key={color}
                     className="w-8 h-8 rounded-full border border-gray-300 cursor-pointer flex items-center justify-center"
@@ -116,7 +116,7 @@ export default function ProductPage({ params }: { params: { id: any } }) {
                   <SelectValue placeholder="Select a size" />
                 </SelectTrigger>
                 <SelectContent>
-                  {product?.sizes?.map((size) => (
+                  {product?.sizes?.map((size: any) => (
                     <SelectItem key={size} value={size}>
                       {size}
                     </SelectItem>
@@ -158,7 +158,7 @@ export default function ProductPage({ params }: { params: { id: any } }) {
             </TabsContent>
             <TabsContent value="features" className="pt-4">
               <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                {product?.features?.map((feature, index) => (
+                {product?.features?.map((feature: any, index: any) => (
                   <li key={index}>{feature}</li>
                 ))}
               </ul>
@@ -171,7 +171,7 @@ export default function ProductPage({ params }: { params: { id: any } }) {
                   Returns accepted within 30 days of delivery. Item must be
                   unworn, unwashed, and with original tags attached.
                 </p> */}
-                {product?.shipping?.map((shipping, index) => (
+                {product?.shipping?.map((shipping: any, index: any) => (
                   <p key={index}>{shipping}</p>
                 ))}
               </div>
@@ -183,7 +183,7 @@ export default function ProductPage({ params }: { params: { id: any } }) {
       <div className="py-12 border-t">
         <h2 className="text-2xl font-bold mb-8">You May Also Like</h2>
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {product?.relatedProducts?.map((relatedProduct) => (
+          {product?.relatedProducts?.map((relatedProduct: any) => (
             <Link
               href={`/products/${relatedProduct.id}`}
               key={relatedProduct.id}
@@ -201,7 +201,7 @@ export default function ProductPage({ params }: { params: { id: any } }) {
               <p className="text-gray-700 mb-1">{relatedProduct?.category}</p>
               <p className="font-bold">${relatedProduct?.price}</p> */}
 
-                <ProductCard product={relatedProduct} />
+              <ProductCard product={relatedProduct} />
             </Link>
           ))}
         </div>
