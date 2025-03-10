@@ -25,10 +25,10 @@ export default function Header() {
               <Link href="/" className="text-lg font-medium hover:text-gray-600 transition-colors">
                 Home
               </Link>
-              <Link href="/products" className="text-lg font-medium hover:text-gray-600 transition-colors">
+              <Link href="/products?product=men" className="text-lg font-medium hover:text-gray-600 transition-colors">
                 Men
               </Link>
-              <Link href="/products" className="text-lg font-medium hover:text-gray-600 transition-colors">
+              <Link href="/products?product=women" className="text-lg font-medium hover:text-gray-600 transition-colors">
                 Women
               </Link>
               <Link href="/products" className="text-lg font-medium hover:text-gray-600 transition-colors">
@@ -54,10 +54,10 @@ export default function Header() {
           <Link href="/" className="text-sm font-medium hover:text-gray-600 transition-colors">
             HOME
           </Link>
-          <Link href="/products" className="text-sm font-medium hover:text-gray-600 transition-colors">
+          <Link href="/products?product=men" className="text-sm font-medium hover:text-gray-600 transition-colors">
             MEN
           </Link>
-          <Link href="/products" className="text-sm font-medium hover:text-gray-600 transition-colors">
+          <Link href="/products?product=women" className="text-sm font-medium hover:text-gray-600 transition-colors">
             WOMEN
           </Link>
           <Link href="/products" className="text-sm font-medium hover:text-gray-600 transition-colors">

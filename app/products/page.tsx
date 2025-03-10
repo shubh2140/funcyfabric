@@ -254,7 +254,7 @@
 // ]
 
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Filter } from "lucide-react";
@@ -275,18 +275,144 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Checkbox } from "@/components/ui/checkbox";
+import ProductCardSkeleton from "@/components/pages/home/ProductCardSkeleton";
+import ProductCard from "@/components/pages/home/ProductCard";
+import { useSearchParams } from "next/navigation";
 
 export default function ProductsPage() {
   const [sortBy, setSortBy] = useState(""); // State for sorting option
+  const searchParams = useSearchParams();
+
+  const [filterProduct, setFilterProduct] = useState([] as any);
+  const [filterLoading, setFilterLoading] = useState(true);
 
   // Function to sort products
-  const sortedProducts = [...products].sort((a: any, b: any) => {
+  const sortedProducts = [...filterProduct].sort((a: any, b: any) => {
     if (sortBy === "newest") return b.isNew - a.isNew;
     if (sortBy === "price-low") return a.price - b.price;
     if (sortBy === "price-high") return b.price - a.price;
     if (sortBy === "popular") return 0; // Placeholder for popularity sorting
     return 0;
   });
+
+  const fetchNewArrivals = async () => {
+    setFilterLoading(true);
+    try {
+      const response = await fetch(
+        "http://localhost:3000/api/products/new-arrivals"
+      );
+      if (!response.ok) {
+        throw new Error("Failed to fetch products");
+      }
+      const data = await response.json();
+      if (Array.isArray(data)) {
+        setFilterProduct(data);
+        setFilterLoading(false);
+      }
+    } catch (err) {
+    } finally {
+      setFilterLoading(false);
+    }
+  };
+
+  const fetchFeatureProducts = async () => {
+    setFilterLoading(true);
+    try {
+      const response = await fetch(
+        "https://api.funcyfabric.in/api/products/feature"
+      );
+      if (!response.ok) {
+        throw new Error("Failed to fetch products");
+      }
+      const data = await response.json();
+      if (Array.isArray(data)) {
+        setFilterProduct(data);
+        setFilterLoading(false);
+      }
+    } catch (err) {
+    } finally {
+      setFilterLoading(false);
+    }
+  };
+
+  const fetchMenProducts = async () => {
+    setFilterLoading(true);
+    try {
+      const response = await fetch(
+        "https://api.funcyfabric.in/api/products/men"
+      );
+      if (!response.ok) {
+        throw new Error("Failed to fetch products");
+      }
+      const data = await response.json();
+      if (Array.isArray(data)) {
+        setFilterProduct(data);
+        setFilterLoading(false);
+      }
+    } catch (err) {
+    } finally {
+      setFilterLoading(false);
+    }
+  };
+
+  const fetchWomenProducts = async () => {
+    setFilterLoading(true);
+    try {
+      const response = await fetch(
+        "https://api.funcyfabric.in/api/products/women"
+      );
+      if (!response.ok) {
+        throw new Error("Failed to fetch products");
+      }
+      const data = await response.json();
+      if (Array.isArray(data)) {
+        setFilterProduct(data);
+        setFilterLoading(false);
+      }
+    } catch (err) {
+    } finally {
+      setFilterLoading(false);
+    }
+  };
+
+  const fetchAllProducts = async () => {
+    setFilterLoading(true);
+    try {
+      const response = await fetch(
+             `https://api.funcyfabric.in/api/products/`
+          // "http://localhost:3000/api/products"
+      );
+      if (!response.ok) {
+        throw new Error("Failed to fetch products");
+      }
+      const data = await response.json();
+      if (Array.isArray(data)) {
+        setFilterProduct(data);
+        setFilterLoading(false);
+      }
+    } catch (err) {
+    } finally {
+      setFilterLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    if (searchParams.get("product") == "new-arrival") {
+      fetchNewArrivals();
+    }
+    if (searchParams.get("product") == "feature") {
+      fetchFeatureProducts();
+    }
+    if (searchParams.get("product") == "men") {
+      fetchMenProducts();
+    }
+    if (searchParams.get("product") == "women") {
+      fetchWomenProducts();
+    }
+    if (searchParams.get("product") == "all") {
+      fetchAllProducts();
+    }
+  }, [searchParams]);
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -327,47 +453,14 @@ export default function ProductsPage() {
         </div>
 
         {/* Products Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 py-8">
-          {sortedProducts.map((product) => (
-            <Link
-              href={`/products/${product.id}`}
-              key={product.id}
-              className="group"
-            >
-              <div className="relative aspect-[3/4] overflow-hidden bg-gray-100 mb-4">
-                <Image
-                  src={product.image || "/placeholder.svg"}
-                  alt={product.name}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                {product.isNew && (
-                  <div className="absolute top-2 left-2 bg-black text-white text-xs px-2 py-1">
-                    NEW
-                  </div>
-                )}
-                {product.isSale && (
-                  <div className="absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1">
-                    SALE
-                  </div>
-                )}
-              </div>
-              <h3 className="font-medium mb-1">{product.name}</h3>
-              <p className="text-gray-700 mb-1">{product.category}</p>
-              <div className="flex items-center gap-2">
-                {product.isSale ? (
-                  <>
-                    <p className="font-bold">${product.salePrice}</p>
-                    <p className="text-gray-500 line-through">
-                      ${product.price}
-                    </p>
-                  </>
-                ) : (
-                  <p className="font-bold">${product.price}</p>
-                )}
-              </div>
-            </Link>
-          ))}
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 md:gap-6 lg:gap-6 xl:gap-6 gap-2">
+          {filterLoading
+            ? [...Array(4)].map((_, index) => (
+                <ProductCardSkeleton key={index} />
+              ))
+            : filterProduct.map((product: any) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
         </div>
       </div>
     </div>

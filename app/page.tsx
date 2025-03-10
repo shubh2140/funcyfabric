@@ -1,10 +1,67 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ProductCardSkeleton from "@/components/pages/home/ProductCardSkeleton";
 import ProductCard from "@/components/pages/home/ProductCard";
+import { useEffect, useState } from "react";
+import { baseUrl } from "@/lib/utils";
 
 export default function Home() {
+  const [newArrivals, setNewArrivals] = useState([] as any);
+  const [featureProducts, setFeatureProducts] = useState([] as any);
+  const [newArrivalsLoading, setNewArrivalsLoading] = useState(true);
+  const [featureLoading, setFeatureLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchNewArrivals = async () => {
+      setNewArrivalsLoading(true);
+      try {
+        const response = await fetch(
+          // "https://funcyfabric-backend.vercel.app/api/products/new-arrivals"
+          "http://localhost:3000/api/products/new-arrivals"
+
+        );
+        if (!response.ok) {
+          throw new Error("Failed to fetch products");
+        }
+        const data = await response.json();
+        if (Array.isArray(data)) {
+          setNewArrivals(data);
+          setNewArrivalsLoading(false);
+        }
+      } catch (err) {
+      } finally {
+        setNewArrivalsLoading(false);
+      }
+    };
+
+    const fetchFeatureProducts = async () => {
+      setFeatureLoading(true);
+      try {
+        const response = await fetch(
+          // "https://funcyfabric-backend.vercel.app/api/products/feature"
+          "http://localhost:3000/api/products/feature"
+        );
+        if (!response.ok) {
+          throw new Error("Failed to fetch products");
+        }
+        const data = await response.json();
+        if (Array.isArray(data)) {
+          setFeatureProducts(data);
+          setFeatureLoading(false);
+        }
+      } catch (err) {
+      } finally {
+        setFeatureLoading(false);
+      }
+    };
+
+    fetchNewArrivals();
+    fetchFeatureProducts();
+  }, []);
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
@@ -40,16 +97,22 @@ export default function Home() {
         <div className="flex justify-between items-center mb-4 md:mb-8 lg:mb-8">
           <h2 className="text-md md:text-3xl font-bold">NEW ARRIVALS</h2>
           <Link
-            href="/products"
+            href="/products?product=new-arrival"
             className="flex items-center text-sm font-medium hover:underline"
           >
             VIEW ALL <ChevronRight className="h-4 w-4 ml-1" />
           </Link>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 md:gap-6 lg:gap-6 xl:gap-6 gap-2">
-          {newArrivalsProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
+          {newArrivalsLoading
+            ? [...Array(4)].map((_, index) => (
+                <ProductCardSkeleton key={index} />
+              ))
+            : newArrivals
+                .slice(0, 4)
+                .map((product: any) => (
+                  <ProductCard key={product.id} product={product} />
+                ))}
         </div>
       </section>
 
@@ -58,7 +121,7 @@ export default function Home() {
         <div className="flex justify-between items-center mb-4 md:mb-8 lg:mb-8">
           <h2 className="text-md md:text-3xl font-bold">FEATURED COLLECTION</h2>
           <Link
-            href="/products"
+            href="/products?product=feature"
             className="flex items-center text-sm font-medium hover:underline"
           >
             VIEW ALL <ChevronRight className="h-4 w-4 ml-1" />
@@ -120,9 +183,15 @@ export default function Home() {
           })}
         </div> */}
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 md:gap-6 lg:gap-6 xl:gap-6 gap-2">
-          {featuredProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
+          {featureLoading
+            ? [...Array(4)].map((_, index) => (
+                <ProductCardSkeleton key={index} />
+              ))
+            : featureProducts
+                .slice(0, 4)
+                .map((product: any) => (
+                  <ProductCard key={product.id} product={product} />
+                ))}
         </div>
       </section>
 
@@ -153,10 +222,10 @@ export default function Home() {
             </Button>
           </div>
           <div className="relative w-full h-80 md:h-[400px] rounded-lg overflow-hidden">
-            <Image
+            <img
               src="/my-journey.jpg"
               alt="Brand Story"
-              fill
+              // fill
               className="object-cover"
             />
           </div>
@@ -171,14 +240,14 @@ export default function Home() {
         <div className="grid grid-cols-3 sm:grid-cols-3 gap-6">
           {categories.map((category) => (
             <Link
-              href={`/products?category=${category.slug}`}
+              href={`/products?product=${category.slug}`}
               key={category.name}
               className="group relative aspect-[3/4] overflow-hidden"
             >
-              <Image
+              <img
                 src={category.image || "/placeholder.svg"}
                 alt={category.name}
-                fill
+                // fill
                 className="object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
@@ -217,45 +286,6 @@ export default function Home() {
     </div>
   );
 }
-
-const newArrivalsProducts = [
-  {
-    id: "5",
-    name: "Classic Oversized Grey",
-    category: "Men",
-    price: 499,
-    discountPrice: 399,
-    image: "/newArrivals/5.jpg",
-    isNew: true,
-  },
-  {
-    id: "6",
-    name: "Pretty Oversized White",
-    category: "Women",
-    price: 499,
-    discountPrice: 399,
-    image: "/newArrivals/6.jpg",
-    isNew: true,
-  },
-  {
-    id: "7",
-    name: "Amazing Oversized Blue",
-    category: "Men",
-    price: 499,
-    discountPrice: 399,
-    image: "/newArrivals/7.jpg",
-    isNew: true,
-  },
-  {
-    id: "8",
-    name: "Cute Oversized Green",
-    category: "Women",
-    price: 499,
-    discountPrice: 399,
-    image: "/newArrivals/8.jpg",
-    isNew: true,
-  },
-];
 
 // Static data for frontend
 const featuredProducts = [

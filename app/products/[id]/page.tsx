@@ -20,9 +20,30 @@ export default function ProductPage({ params }: { params: { id: any } }) {
   // For now, we'll use static data
 
   const [product, setProduct] = useState({} as any);
+  const [productLoading, setProductLoading] = useState(true);
   useEffect(() => {
-    setProduct(allProductData.filter((item) => item.id == params.id)[0]);
-    console.log(params.id);
+    const fetchProductById = async (id: any) => {
+      setProductLoading(true);
+      try {
+        const response = await fetch(
+          // `https://api.funcyfabric.in/api/products/${id}`
+          `http://localhost:3000/api/products/${id}`
+        );
+        if (!response.ok) {
+          throw new Error("Failed to fetch products");
+        }
+        const data = await response.json();
+        if (data !== null) {
+          setProduct(data);
+          setProductLoading(false);
+        }
+      } catch (err) {
+      } finally {
+        setProductLoading(false);
+      }
+    };
+
+    fetchProductById(params.id);
   }, []);
   return (
     <div className="container mx-auto px-4 py-8">
@@ -44,30 +65,32 @@ export default function ProductPage({ params }: { params: { id: any } }) {
         {/* Product Images */}
         <div className="space-y-4">
           <div className="relative aspect-square overflow-hidden bg-gray-100">
-            <Image
+            <img
               src={product?.image || "/placeholder.svg"}
               alt={product?.name || "Unkown"}
-              fill
+              // fill
               className="object-cover"
-              priority
+              // priority
             />
           </div>
           <div className="grid grid-cols-4 gap-2">
-            {product?.images?.map((image: any, index: any) => (
-              <div
-                key={index}
-                className="relative aspect-square overflow-hidden bg-gray-100 cursor-pointer"
-              >
-                <Link href={`/products/${image.id}`}>
-                  <Image
-                    src={image.image || "/placeholder.svg"}
-                    alt={`${image.name} ${index + 1}`}
-                    fill
-                    className="object-cover"
-                  />
-                </Link>
-              </div>
-            ))}
+            {product?.relatedProducts?.map(
+              (relatedProduct: any, index: any) => (
+                <div
+                  key={index}
+                  className="relative aspect-square overflow-hidden bg-gray-100 cursor-pointer"
+                >
+                  <Link href={`/products/${relatedProduct.id}`}>
+                    <img
+                      src={relatedProduct.image || "/placeholder.svg"}
+                      alt={`${relatedProduct.name} ${index + 1}`}
+                      // fill
+                      className="object-cover"
+                    />
+                  </Link>
+                </div>
+              )
+            )}
           </div>
         </div>
 
@@ -183,10 +206,10 @@ export default function ProductPage({ params }: { params: { id: any } }) {
       <div className="py-12 border-t">
         <h2 className="text-2xl font-bold mb-8">You May Also Like</h2>
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {product?.relatedProducts?.map((relatedProduct: any) => (
+          {product?.likedProducts?.map((likedProduct: any) => (
             <Link
-              href={`/products/${relatedProduct.id}`}
-              key={relatedProduct.id}
+              href={`/products/${likedProduct.id}`}
+              key={likedProduct.id}
               className="group"
             >
               {/* <div className="relative aspect-[3/4] overflow-hidden bg-gray-100 mb-4">
@@ -201,7 +224,7 @@ export default function ProductPage({ params }: { params: { id: any } }) {
               <p className="text-gray-700 mb-1">{relatedProduct?.category}</p>
               <p className="font-bold">${relatedProduct?.price}</p> */}
 
-              <ProductCard product={relatedProduct} />
+              <ProductCard product={likedProduct} />
             </Link>
           ))}
         </div>
