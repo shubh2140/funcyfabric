@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronRight, Heart, Share2, ShoppingBag } from "lucide-react";
+import { ChevronRight, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Select,
@@ -11,15 +11,13 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import allProductData from "../../../data/allProduct.json";
 import { useEffect, useState } from "react";
 import ProductCard from "@/components/pages/home/ProductCard";
 import allProducts from "../../../data/allProduct.json";
 import { Badge } from "@/components/ui/badge";
 
 export default function ProductPage({ params }: { params: { id: any } }) {
-  // In a real app, you would fetch the product data based on the ID
-  // For now, we'll use static data
+
 
   const [product, setProduct] = useState({} as any);
   const [quantity, setQuantity] = useState(1);
