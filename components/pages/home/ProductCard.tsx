@@ -71,10 +71,10 @@ const ProductCard = ({ product }: any) => {
       className="group block rounded-md border shadow-sm hover:shadow-lg transition-all duration-300 bg-white"
     >
       <div className="relative overflow-hidden rounded-t-md aspect-[3/4] bg-gray-100">
-        <img
+        <Image
           src={product.image || "/placeholder.svg"}
           alt={product.name}
-          // fill
+          fill
           className="object-cover group-hover:scale-105 transition-transform duration-300"
         />
         {product.isNew && (

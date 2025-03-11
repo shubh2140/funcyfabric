@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import ProductCardSkeleton from "@/components/pages/home/ProductCardSkeleton";
 import ProductCard from "@/components/pages/home/ProductCard";
 import { useEffect, useState } from "react";
-import { baseUrl } from "@/lib/utils";
+import allImages from "../data/allProduct.json";
 
 export default function Home() {
   const [newArrivals, setNewArrivals] = useState([] as any);
@@ -14,53 +14,20 @@ export default function Home() {
   const [newArrivalsLoading, setNewArrivalsLoading] = useState(true);
   const [featureLoading, setFeatureLoading] = useState(true);
 
+  const [email, setEmail] = useState("");
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    alert("Submitted");
+    setEmail(""); // Clear input field
+  };
+
   useEffect(() => {
-    const fetchNewArrivals = async () => {
-      setNewArrivalsLoading(true);
-      try {
-        const response = await fetch(
-          // "https://funcyfabric-backend.vercel.app/api/products/new-arrivals"
-          "http://localhost:3000/api/products/new-arrivals"
+    if (!allImages || allImages.length === 0) return; // Prevent running on empty data
 
-        );
-        if (!response.ok) {
-          throw new Error("Failed to fetch products");
-        }
-        const data = await response.json();
-        if (Array.isArray(data)) {
-          setNewArrivals(data);
-          setNewArrivalsLoading(false);
-        }
-      } catch (err) {
-      } finally {
-        setNewArrivalsLoading(false);
-      }
-    };
-
-    const fetchFeatureProducts = async () => {
-      setFeatureLoading(true);
-      try {
-        const response = await fetch(
-          // "https://funcyfabric-backend.vercel.app/api/products/feature"
-          "http://localhost:3000/api/products/feature"
-        );
-        if (!response.ok) {
-          throw new Error("Failed to fetch products");
-        }
-        const data = await response.json();
-        if (Array.isArray(data)) {
-          setFeatureProducts(data);
-          setFeatureLoading(false);
-        }
-      } catch (err) {
-      } finally {
-        setFeatureLoading(false);
-      }
-    };
-
-    fetchNewArrivals();
-    fetchFeatureProducts();
-  }, []);
+    setNewArrivals(allImages.filter((item) => item.isNew));
+    setFeatureProducts(allImages.filter((item) => !item.isNew));
+  }, [allImages]);
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -104,15 +71,15 @@ export default function Home() {
           </Link>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 md:gap-6 lg:gap-6 xl:gap-6 gap-2">
-          {newArrivalsLoading
-            ? [...Array(4)].map((_, index) => (
-                <ProductCardSkeleton key={index} />
-              ))
-            : newArrivals
+          {newArrivals && newArrivals.length > 0
+            ? newArrivals
                 .slice(0, 4)
                 .map((product: any) => (
                   <ProductCard key={product.id} product={product} />
-                ))}
+                ))
+            : [...Array(4)].map((_, index) => (
+                <ProductCardSkeleton key={index} />
+              ))}
         </div>
       </section>
 
@@ -127,71 +94,17 @@ export default function Home() {
             VIEW ALL <ChevronRight className="h-4 w-4 ml-1" />
           </Link>
         </div>
-        {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {featuredProducts.map((product) => {
-            const hasDiscount =
-              product.discountPrice && product.discountPrice < product.price;
-            const discountPercentage = hasDiscount
-              ? Math.round(
-                  ((product.price - product.discountPrice) / product.price) *
-                    100
-                )
-              : 0;
 
-            return (
-              <Link
-                href={`/products/${product.id}`}
-                key={product.id}
-                className="group"
-              >
-                <div className="relative aspect-[3/4] overflow-hidden bg-gray-100 rounded-xl shadow-md transition-all duration-300 hover:shadow-lg">
-                  <Image
-                    src={product.image || "/placeholder.svg"}
-                    alt={product.name}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  {product.isNew && (
-                    <div className="absolute top-2 left-2 bg-black text-white text-xs px-3 py-1 rounded-full">
-                      NEW
-                    </div>
-                  )}
-                  {hasDiscount && (
-                    <div className="absolute top-2 right-2 bg-red-500 text-white text-xs px-3 py-1 rounded-full">
-                      -{discountPercentage}%
-                    </div>
-                  )}
-                </div>
-                <h3 className="font-medium text-lg mt-2">{product.name}</h3>
-                <p className="text-gray-600 text-sm">{product.category}</p>
-                <div className="mt-1 flex items-center space-x-2">
-                  {hasDiscount ? (
-                    <>
-                      <span className="text-gray-500 line-through text-sm">
-                        {product.price}
-                      </span>
-                      <span className="font-bold text-red-500 text-lg">
-                        {product.discountPrice}
-                      </span>
-                    </>
-                  ) : (
-                    <span className="font-bold text-lg">{product.price}</span>
-                  )}
-                </div>
-              </Link>
-            );
-          })}
-        </div> */}
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 md:gap-6 lg:gap-6 xl:gap-6 gap-2">
-          {featureLoading
-            ? [...Array(4)].map((_, index) => (
-                <ProductCardSkeleton key={index} />
-              ))
-            : featureProducts
+          {featureProducts && featureProducts.length > 0
+            ? featureProducts
                 .slice(0, 4)
                 .map((product: any) => (
                   <ProductCard key={product.id} product={product} />
-                ))}
+                ))
+            : [...Array(4)].map((_, index) => (
+                <ProductCardSkeleton key={index} />
+              ))}
         </div>
       </section>
 
@@ -222,10 +135,10 @@ export default function Home() {
             </Button>
           </div>
           <div className="relative w-full h-80 md:h-[400px] rounded-lg overflow-hidden">
-            <img
+            <Image
               src="/my-journey.jpg"
               alt="Brand Story"
-              // fill
+              fill
               className="object-cover"
             />
           </div>
@@ -244,10 +157,10 @@ export default function Home() {
               key={category.name}
               className="group relative aspect-[3/4] overflow-hidden"
             >
-              <img
+              <Image
                 src={category.image || "/placeholder.svg"}
                 alt={category.name}
-                // fill
+                fill
                 className="object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
@@ -264,20 +177,28 @@ export default function Home() {
       <section className="py-16 px-6 md:px-12 lg:px-24 bg-black text-white">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
-            JOIN THE FUNCY FAMILY
+            JOIN THE FUNCY FABRIC FAMILY
           </h2>
           <p className="mb-8">
             Subscribe to our newsletter for exclusive offers, new releases, and
             more.
           </p>
-          <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+          <form
+            onSubmit={handleSubmit}
+            className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto"
+          >
             <input
               type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="Your email address"
               className="flex-1 px-4 py-3 bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-white/50"
               required
             />
-            <Button className="bg-white text-black hover:bg-white/90">
+            <Button
+              type="submit"
+              className="bg-white text-black hover:bg-white/90"
+            >
               SUBSCRIBE
             </Button>
           </form>
@@ -286,46 +207,6 @@ export default function Home() {
     </div>
   );
 }
-
-// Static data for frontend
-const featuredProducts = [
-  {
-    id: "1",
-    name: "Classic Oversized Black",
-    category: "Men",
-    price: 499,
-    discountPrice: 399,
-    image: "/featureProducts/1.jpg",
-    isNew: true,
-  },
-  {
-    id: "2",
-    name: "Plain Oversized Pink",
-    category: "Women",
-    price: 499,
-    discountPrice: 399,
-    image: "/featureProducts/2.jpg",
-    isNew: true,
-  },
-  {
-    id: "3",
-    name: "Plain Oversized Red",
-    category: "Men",
-    price: 499,
-    discountPrice: 399,
-    image: "/featureProducts/3.jpg",
-    isNew: true,
-  },
-  {
-    id: "4",
-    name: "Graphic Print Tee",
-    category: "Women",
-    price: 499,
-    discountPrice: 399,
-    image: "/featureProducts/4.jpg",
-    isNew: true,
-  },
-];
 
 const categories = [
   {

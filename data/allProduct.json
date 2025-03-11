@@ -1,12 +1,12 @@
 [
   {
     "id": 1,
-    "name": "Classic Oversized Black",
+    "name": "Bold Oversized Red",
     "category": "Men",
     "price": 499,
     "discountPrice": 399,
     "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
-    "image": "/featureProducts/1.jpg",
+    "image": "/featureProducts/1.jpeg",
     "isNew": false,
     "features": [
       "100% Premium Cotton",
@@ -16,79 +16,96 @@
       "Machine washable"
     ],
     "shipping": [
-      "Free standard shipping on all orders over $100.",
-      "Express shipping available for an additional fee.",
-      "Returns accepted within 30 days of delivery. Item must beunworn, unwashed, and with original tags attached"
+      "Free standard shipping on all orders.",
+      "Express shipping available for an additional fee."
     ],
     "colors": ["Black", "White", "Gray", "Navy"],
     "sizes": ["M", "L", "XL"],
-    "images": [
+    "youCanAlsoLike": [
       {
         "id": "2",
-        "name": "Plain Oversized Pink",
+        "name": "Classic Oversized Black",
         "category": "Women",
         "price": 499,
         "discountPrice": 399,
-        "image": "/featureProducts/2.jpg",
+        "image": "/featureProducts/2.jpeg",
         "isNew": true
       },
       {
         "id": "3",
-        "name": "Plain Oversized Red",
+        "name": "Cool Oversized Blue",
         "category": "Men",
         "price": 499,
         "discountPrice": 399,
-        "image": "/featureProducts/3.jpg",
+        "image": "/featureProducts/3.jpeg",
         "isNew": true
       },
       {
         "id": "4",
-        "name": "Graphic Print Tee",
+        "name": "Fresh Oversized Green",
         "category": "Women",
         "price": 499,
         "discountPrice": 399,
-        "image": "/featureProducts/4.jpg",
+        "image": "/featureProducts/4.jpeg",
+        "isNew": true
+      },
+      {
+        "id": "5",
+        "name": "Rich Oversized Maroon",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/featureProducts/5.jpeg",
         "isNew": true
       }
     ],
     "relatedProducts": [
       {
         "id": "2",
-        "name": "Plain Oversized Pink",
+        "name": "Classic Oversized Black",
         "category": "Women",
         "price": 499,
         "discountPrice": 399,
-        "image": "/featureProducts/2.jpg",
-        "isNew": false
+        "image": "/featureProducts/2.jpeg",
+        "isNew": true
       },
       {
         "id": "3",
-        "name": "Plain Oversized Red",
+        "name": "Cool Oversized Blue",
         "category": "Men",
         "price": 499,
         "discountPrice": 399,
-        "image": "/featureProducts/3.jpg",
-        "isNew": false
+        "image": "/featureProducts/3.jpeg",
+        "isNew": true
       },
       {
         "id": "4",
-        "name": "Graphic Print Tee",
+        "name": "Fresh Oversized Green",
         "category": "Women",
         "price": 499,
         "discountPrice": 399,
-        "image": "/featureProducts/4.jpg",
-        "isNew": false
+        "image": "/featureProducts/4.jpeg",
+        "isNew": true
+      },
+      {
+        "id": "5",
+        "name": "Rich Oversized Maroon",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "image": "/featureProducts/5.jpeg",
+        "isNew": true
       }
     ]
   },
   {
     "id": 2,
-    "name": "Pretty Oversize Pink",
+    "name": "Classic Oversized Black",
     "category": "Women",
     "price": 499,
     "discountPrice": 399,
     "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
-    "image": "/featureProducts/2.jpg",
+    "image": "/featureProducts/2.jpeg",
     "isNew": false,
     "features": [
       "100% Premium Cotton",
@@ -98,79 +115,104 @@
       "Machine washable"
     ],
     "shipping": [
-      "Free standard shipping on all orders over $100.",
-      "Express shipping available for an additional fee.",
-      "Returns accepted within 30 days of delivery. Item must beunworn, unwashed, and with original tags attached"
+      "Free standard shipping on all orders.",
+      "Express shipping available for an additional fee."
     ],
     "colors": ["Black", "White", "Gray", "Navy"],
     "sizes": ["M", "L", "XL"],
-    "images": [
+    "youCanAlsoLike": [
       {
-        "id": "1",
-        "name": "Classic Oversized Black",
+        "id": 3,
+        "name": "Cool Oversized Blue",
         "category": "Men",
         "price": 499,
         "discountPrice": 399,
-        "image": "/newArrivals/1.jpg",
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/featureProducts/3.jpeg",
         "isNew": false
       },
       {
-        "id": "3",
-        "name": "Plain Oversized Red",
-        "category": "Men",
-        "price": 499,
-        "discountPrice": 399,
-        "image": "/newArrivals/3.jpg",
-        "isNew": false
-      },
-      {
-        "id": "4",
-        "name": "Graphic Print Tee",
+        "id": 4,
+        "name": "Fresh Oversized Green",
         "category": "Women",
         "price": 499,
         "discountPrice": 399,
-        "image": "/newArrivals/4.jpg",
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/featureProducts/4.jpeg",
         "isNew": false
+      },
+      {
+        "id": 5,
+        "name": "Rich Oversized Maroon",
+        "category": "Men",
+        "price": 499,
+        "discountPrice": 399,
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/featureProducts/5.jpeg",
+        "isNew": true
+      },
+      {
+        "id": 6,
+        "name": "Sleek Oversized Gray",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/newArrivals/6.jpeg",
+        "isNew": true
       }
     ],
     "relatedProducts": [
       {
-        "id": "1",
-        "name": "Classic Oversized Black",
+        "id": 3,
+        "name": "Cool Oversized Blue",
         "category": "Men",
         "price": 499,
         "discountPrice": 399,
-        "image": "/newArrivals/1.jpg",
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/featureProducts/3.jpeg",
         "isNew": false
       },
       {
-        "id": "3",
-        "name": "Plain Oversized Red",
-        "category": "Men",
-        "price": 499,
-        "discountPrice": 399,
-        "image": "/newArrivals/3.jpg",
-        "isNew": false
-      },
-      {
-        "id": "4",
-        "name": "Graphic Print Tee",
+        "id": 4,
+        "name": "Fresh Oversized Green",
         "category": "Women",
         "price": 499,
         "discountPrice": 399,
-        "image": "/newArrivals/4.jpg",
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/featureProducts/4.jpeg",
         "isNew": false
+      },
+      {
+        "id": 5,
+        "name": "Rich Oversized Maroon",
+        "category": "Men",
+        "price": 499,
+        "discountPrice": 399,
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/featureProducts/5.jpeg",
+        "isNew": true
+      },
+      {
+        "id": 6,
+        "name": "Sleek Oversized Gray",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/newArrivals/6.jpeg",
+        "isNew": true
       }
     ]
   },
   {
     "id": 3,
-    "name": "Amazing Oversized Red",
+    "name": "Cool Oversized Blue",
     "category": "Men",
     "price": 499,
     "discountPrice": 399,
     "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
-    "image": "/featureProducts/3.jpg",
+    "image": "/featureProducts/3.jpeg",
     "isNew": false,
     "features": [
       "100% Premium Cotton",
@@ -180,79 +222,104 @@
       "Machine washable"
     ],
     "shipping": [
-      "Free standard shipping on all orders over $100.",
-      "Express shipping available for an additional fee.",
-      "Returns accepted within 30 days of delivery. Item must beunworn, unwashed, and with original tags attached"
+      "Free standard shipping on all orders.",
+      "Express shipping available for an additional fee."
     ],
     "colors": ["Black", "White", "Gray", "Navy"],
     "sizes": ["M", "L", "XL"],
-    "images": [
+    "youCanAlsoLike": [
       {
-        "id": "2",
-        "name": "Plain Oversized Pink",
+        "id": 4,
+        "name": "Fresh Oversized Green",
         "category": "Women",
         "price": 499,
         "discountPrice": 399,
-        "image": "/newArrivals/2.jpg",
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/featureProducts/4.jpeg",
         "isNew": false
       },
       {
-        "id": "4",
-        "name": "Graphic Print Tee",
-        "category": "Women",
-        "price": 499,
-        "discountPrice": 399,
-        "image": "/newArrivals/4.jpg",
-        "isNew": false
-      },
-      {
-        "id": "1",
-        "name": "Classic Oversized Black",
+        "id": 5,
+        "name": "Rich Oversized Maroon",
         "category": "Men",
         "price": 499,
         "discountPrice": 399,
-        "image": "/newArrivals/1.jpg",
-        "isNew": false
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/featureProducts/5.jpeg",
+        "isNew": true
+      },
+      {
+        "id": 6,
+        "name": "Sleek Oversized Gray",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/newArrivals/6.jpeg",
+        "isNew": true
+      },
+      {
+        "id": 7,
+        "name": "Soft Oversized Beige",
+        "category": "Men",
+        "price": 499,
+        "discountPrice": 399,
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/newArrivals/7.jpeg",
+        "isNew": true
       }
     ],
     "relatedProducts": [
       {
-        "id": "2",
-        "name": "Plain Oversized Pink",
+        "id": 4,
+        "name": "Fresh Oversized Green",
         "category": "Women",
         "price": 499,
         "discountPrice": 399,
-        "image": "/newArrivals/2.jpg",
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/featureProducts/4.jpeg",
         "isNew": false
       },
       {
-        "id": "4",
-        "name": "Graphic Print Tee",
-        "category": "Women",
-        "price": 499,
-        "discountPrice": 399,
-        "image": "/newArrivals/4.jpg",
-        "isNew": false
-      },
-      {
-        "id": "1",
-        "name": "Classic Oversized Black",
+        "id": 5,
+        "name": "Rich Oversized Maroon",
         "category": "Men",
         "price": 499,
         "discountPrice": 399,
-        "image": "/newArrivals/1.jpg",
-        "isNew": false
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/featureProducts/5.jpeg",
+        "isNew": true
+      },
+      {
+        "id": 6,
+        "name": "Sleek Oversized Gray",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/newArrivals/6.jpeg",
+        "isNew": true
+      },
+      {
+        "id": 7,
+        "name": "Soft Oversized Beige",
+        "category": "Men",
+        "price": 499,
+        "discountPrice": 399,
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/newArrivals/7.jpeg",
+        "isNew": true
       }
     ]
   },
   {
     "id": 4,
-    "name": "Premium Oversized Black",
+    "name": "Fresh Oversized Green",
     "category": "Women",
     "price": 499,
     "discountPrice": 399,
     "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
-    "image": "/featureProducts/4.jpg",
+    "image": "/featureProducts/4.jpeg",
     "isNew": false,
     "features": [
       "100% Premium Cotton",
@@ -262,79 +329,104 @@
       "Machine washable"
     ],
     "shipping": [
-      "Free standard shipping on all orders over $100.",
-      "Express shipping available for an additional fee.",
-      "Returns accepted within 30 days of delivery. Item must beunworn, unwashed, and with original tags attached"
+      "Free standard shipping on all orders.",
+      "Express shipping available for an additional fee."
     ],
     "colors": ["Black", "White", "Gray", "Navy"],
     "sizes": ["M", "L", "XL"],
-    "images": [
+    "youCanAlsoLike": [
       {
-        "id": "1",
-        "name": "Classic Oversized Black",
+        "id": 5,
+        "name": "Rich Oversized Maroon",
         "category": "Men",
         "price": 499,
         "discountPrice": 399,
-        "image": "/newArrivals/1.jpg",
-        "isNew": false
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/featureProducts/5.jpeg",
+        "isNew": true
       },
       {
-        "id": "2",
-        "name": "Plain Oversized Pink",
+        "id": 6,
+        "name": "Sleek Oversized Gray",
         "category": "Women",
         "price": 499,
         "discountPrice": 399,
-        "image": "/newArrivals/2.jpg",
-        "isNew": false
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/newArrivals/6.jpeg",
+        "isNew": true
       },
       {
-        "id": "3",
-        "name": "Plain Oversized Red",
+        "id": 7,
+        "name": "Soft Oversized Beige",
         "category": "Men",
         "price": 499,
         "discountPrice": 399,
-        "image": "/newArrivals/3.jpg",
-        "isNew": false
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/newArrivals/7.jpeg",
+        "isNew": true
+      },
+      {
+        "id": 8,
+        "name": "Stylish Oversized Yellow",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/newArrivals/8.jpeg",
+        "isNew": true
       }
     ],
     "relatedProducts": [
       {
-        "id": "1",
-        "name": "Classic Oversized Black",
+        "id": 5,
+        "name": "Rich Oversized Maroon",
         "category": "Men",
         "price": 499,
         "discountPrice": 399,
-        "image": "/newArrivals/1.jpg",
-        "isNew": false
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/featureProducts/5.jpeg",
+        "isNew": true
       },
       {
-        "id": "2",
-        "name": "Plain Oversized Pink",
+        "id": 6,
+        "name": "Sleek Oversized Gray",
         "category": "Women",
         "price": 499,
         "discountPrice": 399,
-        "image": "/newArrivals/2.jpg",
-        "isNew": false
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/newArrivals/6.jpeg",
+        "isNew": true
       },
       {
-        "id": "3",
-        "name": "Plain Oversized Red",
+        "id": 7,
+        "name": "Soft Oversized Beige",
         "category": "Men",
         "price": 499,
         "discountPrice": 399,
-        "image": "/newArrivals/3.jpg",
-        "isNew": false
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/newArrivals/7.jpeg",
+        "isNew": true
+      },
+      {
+        "id": 8,
+        "name": "Stylish Oversized Yellow",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/newArrivals/8.jpeg",
+        "isNew": true
       }
     ]
   },
   {
     "id": 5,
-    "name": "Classic Oversized Grey",
+    "name": "Rich Oversized Maroon",
     "category": "Men",
     "price": 499,
     "discountPrice": 399,
     "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
-    "image": "/newArrivals/5.jpg",
+    "image": "/featureProducts/5.jpeg",
     "isNew": true,
     "features": [
       "100% Premium Cotton",
@@ -344,79 +436,104 @@
       "Machine washable"
     ],
     "shipping": [
-      "Free standard shipping on all orders over $100.",
-      "Express shipping available for an additional fee.",
-      "Returns accepted within 30 days of delivery. Item must beunworn, unwashed, and with original tags attached"
+      "Free standard shipping on all orders.",
+      "Express shipping available for an additional fee."
     ],
     "colors": ["Black", "White", "Gray", "Navy"],
     "sizes": ["M", "L", "XL"],
-    "images": [
+    "youCanAlsoLike": [
       {
-        "id": "6",
-        "name": "Plain Oversized Pink",
+        "id": 6,
+        "name": "Sleek Oversized Gray",
         "category": "Women",
         "price": 499,
         "discountPrice": 399,
-        "image": "/newArrivals/6.jpg",
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/newArrivals/6.jpeg",
         "isNew": true
       },
       {
-        "id": "7",
-        "name": "Plain Oversized Red",
+        "id": 7,
+        "name": "Soft Oversized Beige",
         "category": "Men",
         "price": 499,
         "discountPrice": 399,
-        "image": "/newArrivals/7.jpg",
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/newArrivals/7.jpeg",
         "isNew": true
       },
       {
-        "id": "8",
-        "name": "Graphic Print Tee",
+        "id": 8,
+        "name": "Stylish Oversized Yellow",
         "category": "Women",
         "price": 499,
         "discountPrice": 399,
-        "image": "/newArrivals/8.jpg",
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/newArrivals/8.jpeg",
+        "isNew": true
+      },
+      {
+        "id": 9,
+        "name": "Trendy Oversized White",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/newArrivals/9.jpeg",
         "isNew": true
       }
     ],
     "relatedProducts": [
       {
-        "id": "6",
-        "name": "Plain Oversized Pink",
+        "id": 6,
+        "name": "Sleek Oversized Gray",
         "category": "Women",
         "price": 499,
         "discountPrice": 399,
-        "image": "/newArrivals/6.jpg",
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/newArrivals/6.jpeg",
         "isNew": true
       },
       {
-        "id": "7",
-        "name": "Plain Oversized Red",
+        "id": 7,
+        "name": "Soft Oversized Beige",
         "category": "Men",
         "price": 499,
         "discountPrice": 399,
-        "image": "/newArrivals/7.jpg",
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/newArrivals/7.jpeg",
         "isNew": true
       },
       {
-        "id": "8",
-        "name": "Graphic Print Tee",
+        "id": 8,
+        "name": "Stylish Oversized Yellow",
         "category": "Women",
         "price": 499,
         "discountPrice": 399,
-        "image": "/newArrivals/8.jpg",
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/newArrivals/8.jpeg",
+        "isNew": true
+      },
+      {
+        "id": 9,
+        "name": "Trendy Oversized White",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/newArrivals/9.jpeg",
         "isNew": true
       }
     ]
   },
   {
     "id": 6,
-    "name": "Pretty Oversized White",
+    "name": "Sleek Oversized Gray",
     "category": "Women",
     "price": 499,
     "discountPrice": 399,
     "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
-    "image": "/newArrivals/6.jpg",
+    "image": "/newArrivals/6.jpeg",
     "isNew": true,
     "features": [
       "100% Premium Cotton",
@@ -426,79 +543,104 @@
       "Machine washable"
     ],
     "shipping": [
-      "Free standard shipping on all orders over $100.",
-      "Express shipping available for an additional fee.",
-      "Returns accepted within 30 days of delivery. Item must beunworn, unwashed, and with original tags attached"
+      "Free standard shipping on all orders.",
+      "Express shipping available for an additional fee."
     ],
     "colors": ["Black", "White", "Gray", "Navy"],
     "sizes": ["M", "L", "XL"],
-    "images": [
+    "youCanAlsoLike": [
       {
-        "id": "7",
-        "name": "Plain Oversized Red",
+        "id": 7,
+        "name": "Soft Oversized Beige",
         "category": "Men",
         "price": 499,
         "discountPrice": 399,
-        "image": "/newArrivals/7.jpg",
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/newArrivals/7.jpeg",
         "isNew": true
       },
       {
-        "id": "8",
-        "name": "Graphic Print Tee",
+        "id": 8,
+        "name": "Stylish Oversized Yellow",
         "category": "Women",
         "price": 499,
         "discountPrice": 399,
-        "image": "/newArrivals/8.jpg",
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/newArrivals/8.jpeg",
         "isNew": true
       },
       {
-        "id": "5",
-        "name": "Classic Oversized Grey",
-        "category": "Men",
+        "id": 9,
+        "name": "Trendy Oversized White",
+        "category": "Women",
         "price": 499,
         "discountPrice": 399,
-        "image": "/newArrivals/5.jpg",
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/newArrivals/9.jpeg",
+        "isNew": true
+      },
+      {
+        "id": 10,
+        "name": "Vibrant Oversized Orange",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/newArrivals/10.jpeg",
         "isNew": true
       }
     ],
     "relatedProducts": [
       {
-        "id": "7",
-        "name": "Plain Oversized Red",
+        "id": 7,
+        "name": "Soft Oversized Beige",
         "category": "Men",
         "price": 499,
         "discountPrice": 399,
-        "image": "/newArrivals/7.jpg",
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/newArrivals/7.jpeg",
         "isNew": true
       },
       {
-        "id": "8",
-        "name": "Graphic Print Tee",
+        "id": 8,
+        "name": "Stylish Oversized Yellow",
         "category": "Women",
         "price": 499,
         "discountPrice": 399,
-        "image": "/newArrivals/8.jpg",
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/newArrivals/8.jpeg",
         "isNew": true
       },
       {
-        "id": "5",
-        "name": "Classic Oversized Grey",
-        "category": "Men",
+        "id": 9,
+        "name": "Trendy Oversized White",
+        "category": "Women",
         "price": 499,
         "discountPrice": 399,
-        "image": "/newArrivals/5.jpg",
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/newArrivals/9.jpeg",
+        "isNew": true
+      },
+      {
+        "id": 10,
+        "name": "Vibrant Oversized Orange",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/newArrivals/10.jpeg",
         "isNew": true
       }
     ]
   },
   {
     "id": 7,
-    "name": "Amazing Oversized Bluee",
+    "name": "Soft Oversized Beige",
     "category": "Men",
     "price": 499,
     "discountPrice": 399,
     "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
-    "image": "/newArrivals/7.jpg",
+    "image": "/newArrivals/7.jpeg",
     "isNew": true,
     "features": [
       "100% Premium Cotton",
@@ -508,79 +650,104 @@
       "Machine washable"
     ],
     "shipping": [
-      "Free standard shipping on all orders over $100.",
-      "Express shipping available for an additional fee.",
-      "Returns accepted within 30 days of delivery. Item must beunworn, unwashed, and with original tags attached"
+      "Free standard shipping on all orders.",
+      "Express shipping available for an additional fee."
     ],
     "colors": ["Black", "White", "Gray", "Navy"],
     "sizes": ["M", "L", "XL"],
-    "images": [
+    "youCanAlsoLike": [
       {
-        "id": "5",
-        "name": "Classic Oversized Grey",
+        "id": 8,
+        "name": "Stylish Oversized Yellow",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/newArrivals/8.jpeg",
+        "isNew": true
+      },
+      {
+        "id": 9,
+        "name": "Trendy Oversized White",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/newArrivals/9.jpeg",
+        "isNew": true
+      },
+      {
+        "id": 10,
+        "name": "Vibrant Oversized Orange",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/newArrivals/10.jpeg",
+        "isNew": true
+      },
+      {
+        "id": 1,
+        "name": "Bold Oversized Red",
         "category": "Men",
         "price": 499,
         "discountPrice": 399,
-        "image": "/newArrivals/5.jpg",
-        "isNew": true
-      },
-      {
-        "id": "6",
-        "name": "Pretty Oversized White",
-        "category": "Women",
-        "price": 499,
-        "discountPrice": 399,
-        "image": "/newArrivals/6.jpg",
-        "isNew": true
-      },
-      {
-        "id": "8",
-        "name": "Cute Oversized Green",
-        "category": "Women",
-        "price": 499,
-        "discountPrice": 399,
-        "image": "/newArrivals/8.jpg",
-        "isNew": true
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/featureProducts/1.jpeg",
+        "isNew": false
       }
     ],
     "relatedProducts": [
       {
-        "id": "5",
-        "name": "Classic Oversized Grey",
+        "id": 8,
+        "name": "Stylish Oversized Yellow",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/newArrivals/8.jpeg",
+        "isNew": true
+      },
+      {
+        "id": 9,
+        "name": "Trendy Oversized White",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/newArrivals/9.jpeg",
+        "isNew": true
+      },
+      {
+        "id": 10,
+        "name": "Vibrant Oversized Orange",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/newArrivals/10.jpeg",
+        "isNew": true
+      },
+      {
+        "id": 1,
+        "name": "Bold Oversized Red",
         "category": "Men",
         "price": 499,
         "discountPrice": 399,
-        "image": "/newArrivals/5.jpg",
-        "isNew": true
-      },
-      {
-        "id": "6",
-        "name": "Pretty Oversized White",
-        "category": "Women",
-        "price": 499,
-        "discountPrice": 399,
-        "image": "/newArrivals/6.jpg",
-        "isNew": true
-      },
-      {
-        "id": "8",
-        "name": "Cute Oversized Green",
-        "category": "Women",
-        "price": 499,
-        "discountPrice": 399,
-        "image": "/newArrivals/8.jpg",
-        "isNew": true
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/featureProducts/1.jpeg",
+        "isNew": false
       }
     ]
   },
   {
     "id": 8,
-    "name": "Cute Oversized Green",
+    "name": "Stylish Oversized Yellow",
     "category": "Women",
     "price": 499,
     "discountPrice": 399,
     "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
-    "image": "/newArrivals/8.jpg",
+    "image": "/newArrivals/8.jpeg",
     "isNew": true,
     "features": [
       "100% Premium Cotton",
@@ -590,68 +757,307 @@
       "Machine washable"
     ],
     "shipping": [
-      "Free standard shipping on all orders over $100.",
-      "Express shipping available for an additional fee.",
-      "Returns accepted within 30 days of delivery. Item must beunworn, unwashed, and with original tags attached"
+      "Free standard shipping on all orders.",
+      "Express shipping available for an additional fee."
     ],
     "colors": ["Black", "White", "Gray", "Navy"],
     "sizes": ["M", "L", "XL"],
-    "images": [
+    "youCanAlsoLike": [
       {
-        "id": "5",
-        "name": "Classic Oversized Grey",
-        "category": "Men",
-        "price": 499,
-        "discountPrice": 399,
-        "image": "/newArrivals/5.jpg",
-        "isNew": true
-      },
-      {
-        "id": "6",
-        "name": "Pretty Oversized White",
+        "id": 9,
+        "name": "Trendy Oversized White",
         "category": "Women",
         "price": 499,
         "discountPrice": 399,
-        "image": "/newArrivals/6.jpg",
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/newArrivals/9.jpeg",
         "isNew": true
       },
       {
-        "id": "7",
-        "name": "Amazing Oversized Blue",
+        "id": 10,
+        "name": "Vibrant Oversized Orange",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/newArrivals/10.jpeg",
+        "isNew": true
+      },
+      {
+        "id": 1,
+        "name": "Bold Oversized Red",
         "category": "Men",
         "price": 499,
         "discountPrice": 399,
-        "image": "/newArrivals/7.jpg",
-        "isNew": true
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/featureProducts/1.jpeg",
+        "isNew": false
+      },
+      {
+        "id": 2,
+        "name": "Classic Oversized Black",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/featureProducts/2.jpeg",
+        "isNew": false
       }
     ],
     "relatedProducts": [
       {
-        "id": "5",
-        "name": "Classic Oversized Grey",
-        "category": "Men",
-        "price": 499,
-        "discountPrice": 399,
-        "image": "/newArrivals/5.jpg",
-        "isNew": true
-      },
-      {
-        "id": "6",
-        "name": "Pretty Oversized White",
+        "id": 9,
+        "name": "Trendy Oversized White",
         "category": "Women",
         "price": 499,
         "discountPrice": 399,
-        "image": "/newArrivals/6.jpg",
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/newArrivals/9.jpeg",
         "isNew": true
       },
       {
-        "id": "7",
-        "name": "Amazing Oversized Blue",
+        "id": 10,
+        "name": "Vibrant Oversized Orange",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/newArrivals/10.jpeg",
+        "isNew": true
+      },
+      {
+        "id": 1,
+        "name": "Bold Oversized Red",
         "category": "Men",
         "price": 499,
         "discountPrice": 399,
-        "image": "/newArrivals/7.jpg",
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/featureProducts/1.jpeg",
+        "isNew": false
+      },
+      {
+        "id": 2,
+        "name": "Classic Oversized Black",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/featureProducts/2.jpeg",
+        "isNew": false
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Trendy Oversized White",
+    "category": "Women",
+    "price": 499,
+    "discountPrice": 399,
+    "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+    "image": "/newArrivals/9.jpeg",
+    "isNew": true,
+    "features": [
+      "100% Premium Cotton",
+      "Relaxed, oversized fit",
+      "Dropped shoulders",
+      "Round neck",
+      "Machine washable"
+    ],
+    "shipping": [
+      "Free standard shipping on all orders.",
+      "Express shipping available for an additional fee."
+    ],
+    "colors": ["Black", "White", "Gray", "Navy"],
+    "sizes": ["M", "L", "XL"],
+    "youCanAlsoLike": [
+      {
+        "id": 10,
+        "name": "Vibrant Oversized Orange",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/newArrivals/10.jpeg",
         "isNew": true
+      },
+      {
+        "id": 1,
+        "name": "Bold Oversized Red",
+        "category": "Men",
+        "price": 499,
+        "discountPrice": 399,
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/featureProducts/1.jpeg",
+        "isNew": false
+      },
+      {
+        "id": 2,
+        "name": "Classic Oversized Black",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/featureProducts/2.jpeg",
+        "isNew": false
+      },
+      {
+        "id": 3,
+        "name": "Cool Oversized Blue",
+        "category": "Men",
+        "price": 499,
+        "discountPrice": 399,
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/featureProducts/3.jpeg",
+        "isNew": false
+      }
+    ],
+    "relatedProducts": [
+      {
+        "id": 10,
+        "name": "Vibrant Oversized Orange",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/newArrivals/10.jpeg",
+        "isNew": true
+      },
+      {
+        "id": 1,
+        "name": "Bold Oversized Red",
+        "category": "Men",
+        "price": 499,
+        "discountPrice": 399,
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/featureProducts/1.jpeg",
+        "isNew": false
+      },
+      {
+        "id": 2,
+        "name": "Classic Oversized Black",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/featureProducts/2.jpeg",
+        "isNew": false
+      },
+      {
+        "id": 3,
+        "name": "Cool Oversized Blue",
+        "category": "Men",
+        "price": 499,
+        "discountPrice": 399,
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/featureProducts/3.jpeg",
+        "isNew": false
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Vibrant Oversized Orange",
+    "category": "Women",
+    "price": 499,
+    "discountPrice": 399,
+    "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+    "image": "/newArrivals/10.jpeg",
+    "isNew": true,
+    "features": [
+      "100% Premium Cotton",
+      "Relaxed, oversized fit",
+      "Dropped shoulders",
+      "Round neck",
+      "Machine washable"
+    ],
+    "shipping": [
+      "Free standard shipping on all orders.",
+      "Express shipping available for an additional fee."
+    ],
+    "colors": ["Black", "White", "Gray", "Navy"],
+    "sizes": ["M", "L", "XL"],
+    "youCanAlsoLike": [
+      {
+        "id": 1,
+        "name": "Bold Oversized Red",
+        "category": "Men",
+        "price": 499,
+        "discountPrice": 399,
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/featureProducts/1.jpeg",
+        "isNew": false
+      },
+      {
+        "id": 2,
+        "name": "Classic Oversized Black",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/featureProducts/2.jpeg",
+        "isNew": false
+      },
+      {
+        "id": 3,
+        "name": "Cool Oversized Blue",
+        "category": "Men",
+        "price": 499,
+        "discountPrice": 399,
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/featureProducts/3.jpeg",
+        "isNew": false
+      },
+      {
+        "id": 4,
+        "name": "Fresh Oversized Green",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/featureProducts/4.jpeg",
+        "isNew": false
+      }
+    ],
+    "relatedProducts": [
+      {
+        "id": 1,
+        "name": "Bold Oversized Red",
+        "category": "Men",
+        "price": 499,
+        "discountPrice": 399,
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/featureProducts/1.jpeg",
+        "isNew": false
+      },
+      {
+        "id": 2,
+        "name": "Classic Oversized Black",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/featureProducts/2.jpeg",
+        "isNew": false
+      },
+      {
+        "id": 3,
+        "name": "Cool Oversized Blue",
+        "category": "Men",
+        "price": 499,
+        "discountPrice": 399,
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/featureProducts/3.jpeg",
+        "isNew": false
+      },
+      {
+        "id": 4,
+        "name": "Fresh Oversized Green",
+        "category": "Women",
+        "price": 499,
+        "discountPrice": 399,
+        "description": "Our signature oversized t-shirt crafted from premium cotton for ultimate comfort and style. Features a relaxed fit with dropped shoulders and a slightly longer length for that perfect oversized look.",
+        "image": "/featureProducts/4.jpeg",
+        "isNew": false
       }
     ]
   }
