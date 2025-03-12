@@ -203,7 +203,7 @@ export default function Header() {
         </Sheet>
 
         {/* Logo */}
-        <Link href="/" className="h-28 pl-3 md:pl-0 flex items-center">
+        <Link href="/" className="h-28 pl-4 md:pl-0 flex items-center">
           <img
             src="/logo.svg"
             alt="FUNCY FABRIC Logo"
@@ -263,7 +263,7 @@ export default function Header() {
           </a>
 
           <a
-            href="https://wa.me/+91 990297151" // Replace with your actual WhatsApp number
+            href="https://wa.me/91990297151" // Replace with your actual WhatsApp number
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gray-600 text-black transition-colors"
