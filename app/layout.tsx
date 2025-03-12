@@ -42,11 +42,33 @@ import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
+// export const metadata: Metadata = {
+//   title: "Funcy Fabric | Premium Oversized T-shirts",
+//   description: "Experience comfort and style with Funcy Fabric's premium oversized t-shirts",
+//   generator: "v0.dev",
+// };
+
 export const metadata: Metadata = {
-  title: "Funcy Fabric | Premium Oversized T-shirts",
-  description: "Experience comfort and style with Funcy Fabric's premium oversized t-shirts",
-  generator: "v0.dev",
+  title: "Buy Premium Oversized T-Shirts | High-Quality & Stylish",
+  description: "Shop the best oversized t-shirts at Funcy Fabric. Premium, high-quality, and comfortable t-shirts designed for style and comfort.",
+  keywords: "oversized t-shirt, premium t-shirt, high-quality t-shirt, best t-shirt, trendy t-shirts, t shirt, t-shirt",
+  openGraph: {
+    title: "Buy Premium Oversized T-Shirts | High-Quality & Stylish",
+    description: "Experience comfort and style with Funcy Fabric's premium oversized t-shirts. High-quality fabric, modern fit, and trendy designs.",
+    url: "https://funcyfabric.in",
+    siteName: "Funcy Fabric",
+    images: [
+      {
+        url: "featured-tshirt.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Premium Oversized T-Shirt - Funcy Fabric",
+      },
+    ],
+    type: "website",
+  },
 };
+
 
 export default function RootLayout({
   children,
