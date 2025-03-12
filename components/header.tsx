@@ -263,7 +263,7 @@ export default function Header() {
           </a>
 
           <a
-            href="https://wa.me/+91990297151" // Replace with your actual WhatsApp number
+            href="https://wa.me/+91 990297151" // Replace with your actual WhatsApp number
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gray-600 text-black transition-colors"

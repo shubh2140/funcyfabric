@@ -33,7 +33,7 @@ export default function ProductPage({ params }: { params: { id: any } }) {
       `Hey, I wanna buy this product. Product Name: ${product?.name}, Product ID: ${product?.id}, Product Size: ${productSize}, Product Quantity: ${quantity}, Product Price: ${product?.discountPrice}`
     );
 
-    window.open(`https://wa.me/+919902972151?text=${message}`, "_blank");
+    window.open(`https://wa.me/+91 9902972151?text=${message}`, "_blank");
   };
 
   const hasDiscount =
