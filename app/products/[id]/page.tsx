@@ -17,8 +17,6 @@ import allProducts from "../../../data/allProduct.json";
 import { Badge } from "@/components/ui/badge";
 
 export default function ProductPage({ params }: { params: { id: any } }) {
-
-
   const [product, setProduct] = useState({} as any);
   const [quantity, setQuantity] = useState(1);
   const [productSize, setProductSize] = useState(null as any);
@@ -33,7 +31,7 @@ export default function ProductPage({ params }: { params: { id: any } }) {
       `Hey, I wanna buy this product. Product Name: ${product?.name}, Product ID: ${product?.id}, Product Size: ${productSize}, Product Quantity: ${quantity}, Product Price: ${product?.discountPrice}`
     );
 
-    window.open(`https://wa.me/919902972151?text=${message}`, "_blank");
+    window.open(`https://wa.me/919902972151?text=${message}`, "_self");
   };
 
   const hasDiscount =
