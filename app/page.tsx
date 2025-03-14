@@ -41,21 +41,9 @@ export default function Home() {
           priority
         />
         <div className="absolute flex justify-center items-end inset-0 p-6 md:p-8 lg:p-16 bg-gradient-to-r from-black/70 to-transparent">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4">
+          {/* <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4">
             Premium Oversized
-          </h1>
-
-          {/* <p className="text-lg md:text-xl text-white/90 max-w-md mb-8">
-            Experience comfort and style with our premium oversized t-shirts
-          </p> */}
-          {/* <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" className="bg-white text-black hover:bg-white/90">
-              SHOP MEN
-            </Button>
-            <Button size="lg" className="bg-white text-black hover:bg-white/90">
-              SHOP WOMEN
-            </Button>
-          </div> */}
+          </h1> */}
         </div>
       </section>
 
