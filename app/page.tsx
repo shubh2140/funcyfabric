@@ -41,9 +41,9 @@ export default function Home() {
           priority
         />
         <div className="absolute flex justify-center items-end inset-0 p-6 md:p-8 lg:p-16 bg-gradient-to-r from-black/70 to-transparent">
-          {/* <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4">
             Premium Oversized
-          </h1> */}
+          </h1>
         </div>
       </section>
 
