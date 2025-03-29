@@ -32,19 +32,30 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[80vh] w-full overflow-hidden">
-        <Image
-          src="/home-cover.jpg"
-          alt="Hero Image"
-          fill
-          className="object-cover brightness-100"
-          priority
-        />
-        <div className="absolute flex justify-center items-end inset-0 p-6 md:p-8 lg:p-16 bg-gradient-to-r from-black/70 to-transparent">
+      <section className="relative h-[80vh] w-full">
+        <>
+          {/* Image for md and larger screens */}
+          <Image
+            src="/home-cover-pc.jpg"
+            alt="Hero Image"
+            fill
+            className="object-cover hidden md:block"
+          />
+
+          {/* Image for mobile screens (smaller than md) */}
+          <Image
+            src="/home-cover-mobile.jpg"
+            alt="Hero Image"
+            fill
+            className="object-cover block md:hidden"
+          />
+        </>
+
+        {/* <div className="absolute flex justify-center items-end inset-0 p-6 md:p-8 lg:p-16 bg-gradient-to-r from-black/70 to-transparent">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4">
             Premium Oversized
           </h1>
-        </div>
+        </div> */}
       </section>
 
       <section className="pt-8 px-2 md:px-12 lg:px-24 bg-white">
