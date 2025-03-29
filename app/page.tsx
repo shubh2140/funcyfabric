@@ -47,7 +47,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Collection */}
       <section className="pt-8 px-2 md:px-12 lg:px-24 bg-white">
         <div className="flex justify-between items-center mb-4 md:mb-8 lg:mb-8">
           <h2 className="text-md md:text-3xl font-bold">NEW ARRIVALS</h2>
@@ -72,7 +71,7 @@ export default function Home() {
       </section>
 
       {/* Featured Collection */}
-      <section className="pt-8 px-2 md:px-12 lg:px-24 bg-white">
+      {/* <section className="pt-8 px-2 md:px-12 lg:px-24 bg-white">
         <div className="flex justify-between items-center mb-4 md:mb-8 lg:mb-8">
           <h2 className="text-md md:text-3xl font-bold">FEATURED COLLECTION</h2>
           <Link
@@ -94,7 +93,7 @@ export default function Home() {
                 <ProductCardSkeleton key={index} />
               ))}
         </div>
-      </section>
+      </section> */}
 
       {/* Brand Story */}
       <section className="py-16 px-6 md:px-12 lg:px-24 bg-gray-50">

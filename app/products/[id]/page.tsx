@@ -41,6 +41,12 @@ export default function ProductPage({ params }: { params: { id: any } }) {
         ((product.price - product.discountPrice) / product.price) * 100
       )
     : 0;
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  useEffect(() => {
+    const selectedProduct = allProducts.find((item) => item.id == params.id);
+    setProduct(selectedProduct);
+    setSelectedImage(selectedProduct?.image || "/placeholder.svg");
+  }, [params]);
 
   useEffect(() => {
     setProduct(allProducts.filter((item) => item.id == params.id)[0]);
@@ -64,9 +70,9 @@ export default function ProductPage({ params }: { params: { id: any } }) {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
         {/* Product Images */}
         <div className="space-y-4">
-          <div className="relative aspect-square overflow-hidden bg-gray-100">
+          <div className="relative aspect-[3/4] overflow-hidden bg-gray-100">
             <Image
-              src={product?.image || "/placeholder.svg"}
+              src={selectedImage || "/placeholder.svg"}
               alt={product?.name || "Unkown"}
               fill
               className="object-cover"
@@ -88,16 +94,18 @@ export default function ProductPage({ params }: { params: { id: any } }) {
               (relatedProduct: any, index: any) => (
                 <div
                   key={index}
-                  className="relative aspect-square overflow-hidden bg-gray-100 cursor-pointer"
+                  className="relative aspect-[3/4] overflow-hidden bg-gray-100 cursor-pointer"
+                  onClick={() => {console.log("relatedProduct", relatedProduct)
+                    setSelectedImage(relatedProduct)}}
                 >
-                  <Link href={`/products/${relatedProduct.id}`}>
+                  <div>
                     <Image
-                      src={relatedProduct.image || "/placeholder.svg"}
-                      alt={`${relatedProduct.name} ${index + 1}`}
+                      src={relatedProduct || "/placeholder.svg"}
+                      alt={`${relatedProduct}`}
                       fill
                       className="object-cover"
                     />
-                  </Link>
+                  </div>
                 </div>
               )
             )}
@@ -207,7 +215,7 @@ export default function ProductPage({ params }: { params: { id: any } }) {
               </Button>
             </div> */}
             <div className="pt-4">
-              <p className="text-sm text-gray-600">
+              <p className="text-sm font-semibold text-red-600">
                 *We are facing some issues while accepting payments here. To
                 place an order, please contact us on WhatsApp.
               </p>
