@@ -6,6 +6,11 @@ import { Button } from "@/components/ui/button";
 import ProductCardSkeleton from "@/components/pages/home/ProductCardSkeleton";
 import ProductCard from "@/components/pages/home/ProductCard";
 import { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 import allImages from "../data/allProduct.json";
 
 export default function Home() {
@@ -29,33 +34,49 @@ export default function Home() {
     setFeatureProducts(allImages.filter((item) => !item.isNew));
   }, [allImages]);
 
+  const heroImages = [
+    { desktop: "/home-cover-pc-1.jpg", mobile: "/home-cover-mobile-1.jpg" },
+    { desktop: "/home-cover-pc-2.jpg", mobile: "/home-cover-mobile-2.jpg" },
+    { desktop: "/home-cover-pc-3.jpg", mobile: "/home-cover-mobile-3.jpg" },
+    { desktop: "/home-cover-pc-4.jpg", mobile: "/home-cover-mobile-4.jpg" },
+  ];
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[80vh] w-full">
-        <>
-          {/* Image for md and larger screens */}
-          <Image
-            src="/home-cover-pc.jpg"
-            alt="Hero Image"
-            fill
-            className="object-cover hidden md:block"
-          />
+      <section className="relative h-[647px] mx-auto w-full">
+        <Swiper
+          modules={[Autoplay, Pagination, Navigation]}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          pagination={{ clickable: true }}
+          navigation
+          className="w-full h-full text-black"
+        >
+          {heroImages.map((image, index) => (
+            <SwiperSlide key={index}>
+              <div className="relative h-[647px] w-full">
+                {/* Image for md and larger screens */}
+                <Image
+                  src={image.desktop}
+                  alt={`Hero Image ${index + 1}`}
+                  fill
+                  className="object-cover hidden md:block"
+                />
 
-          {/* Image for mobile screens (smaller than md) */}
-          <Image
-            src="/home-cover-mobile.jpg"
-            alt="Hero Image"
-            fill
-            className="object-cover block md:hidden"
-          />
-        </>
+                {/* Image for mobile screens */}
+                <Image
+                  src={image.mobile}
+                  alt={`Hero Image ${index + 1}`}
+                  fill
+                  className="object-cover block md:hidden"
+                />
+              </div>
+            </SwiperSlide>
 
-        {/* <div className="absolute flex justify-center items-end inset-0 p-6 md:p-8 lg:p-16 bg-gradient-to-r from-black/70 to-transparent">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4">
-            Premium Oversized
-          </h1>
-        </div> */}
+          ))}
+        </Swiper>
+
+        
       </section>
 
       <section className="pt-8 px-2 md:px-12 lg:px-24 bg-white">
@@ -71,13 +92,13 @@ export default function Home() {
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 md:gap-6 lg:gap-6 xl:gap-6 gap-2">
           {newArrivals && newArrivals.length > 0
             ? newArrivals
-                .slice(0, 4)
-                .map((product: any) => (
-                  <ProductCard key={product.id} product={product} />
-                ))
+              .slice(0, 4)
+              .map((product: any) => (
+                <ProductCard key={product.id} product={product} />
+              ))
             : [...Array(4)].map((_, index) => (
-                <ProductCardSkeleton key={index} />
-              ))}
+              <ProductCardSkeleton key={index} />
+            ))}
         </div>
       </section>
 
