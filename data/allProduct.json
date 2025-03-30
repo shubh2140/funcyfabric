@@ -1,5 +1,4 @@
-[
-  {
+[{
     "id": 1,
     "name": "✨Funcy Midnight Drift✨",
     "category": "Men",
@@ -8,6 +7,7 @@
     "description": "Experience effortless style with the Funcy Midnight Drift oversized t-shirt. Crafted from premium, breathable fabric, this deep navy tee offers a relaxed fit for all-day comfort.\n\n✅ Ultra-soft & lightweight\n✅ Timeless oversized silhouette\n✅ Versatile & easy to style\n✅ Unisex design\n\n📏 Sizes: S, M, L, XL, XXL\n🛒 Limited stock – shop now!",
     "image": "/newArrivals/funcy_midnight_drift_deep_navy_oversized_tee-1.jpg",
     "isNew": true,
+    "isFeature": false,
     "features": [
       "100% Premium Cotton",
       "Relaxed, oversized fit",
@@ -21,8 +21,7 @@
     ],
     "colors": ["Black", "White", "Gray", "Navy"],
     "sizes": ["S", "M", "L", "XL"],
-    "youCanAlsoLike": [
-      {
+    "youCanAlsoLike": [{
         "id": 2,
         "name": "⚡Sandwave FuncyFit⚡",
         "category": "Men",
@@ -69,6 +68,8 @@
     "description": "Redefine effortless style with the Sandwave FuncyFit oversized t-shirt. Designed for those who appreciate minimal aesthetics and premium comfort, this soft sand-hued tee is a must-have in your wardrobe.\n\n✅ Luxuriously soft, breathable fabric\n✅ Relaxed oversized fit for all-day ease\n✅ Elegant neutral tone for versatile styling\n✅ Unisex design – timeless and effortless\n\n📏 Sizes: S, M, L, XL, XXL\n🛒 Limited stock – shop now for a refined look!",
     "image": "/newArrivals/sandwave_funcyfit-1.jpg",
     "isNew": true,
+    "isFeature": true,
+
     "features": [
       "100% Premium Cotton",
       "Relaxed, oversized fit",
@@ -82,8 +83,7 @@
     ],
     "colors": ["Black", "White", "Gray", "Navy"],
     "sizes": ["S", "M", "L", "XL"],
-    "youCanAlsoLike": [
-      {
+    "youCanAlsoLike": [{
         "id": 3,
         "name": "💜Funcy Lavender Drift💜",
         "category": "Men",
@@ -130,6 +130,8 @@
     "description": "Refined simplicity meets soft luxury. The Funcy Lilac Haze oversized t-shirt is crafted for those who appreciate effortless style and premium comfort.\n\n✅ Ultra-soft cotton with a breathable feel\n✅ Relaxed oversized fit for a modern look\n✅ Soft lilac hue – subtle yet bold\n✅ Unisex design – timeless and versatile\n\n📏 Sizes: S, M, L, XL, XXL\n🛒 Limited stock – own yours today!",
     "image": "/newArrivals/funcy_lavender_drift-1.jpg",
     "isNew": true,
+    "isFeature": false,
+
     "features": [
       "100% Premium Cotton",
       "Relaxed, oversized fit",
@@ -143,8 +145,7 @@
     ],
     "colors": ["Black", "White", "Gray", "Navy"],
     "sizes": ["S", "M", "L", "XL"],
-    "youCanAlsoLike": [
-      {
+    "youCanAlsoLike": [{
         "id": 2,
         "name": "⚡Sandwave FuncyFit⚡",
         "category": "Men",

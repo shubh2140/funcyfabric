@@ -16,6 +16,8 @@ import allImages from "../data/allProduct.json";
 export default function Home() {
   const [newArrivals, setNewArrivals] = useState([] as any);
   const [featureProducts, setFeatureProducts] = useState([] as any);
+  const [menProducts, setMenProducts] = useState([] as any);
+  const [womenProducts, setWomenProducts] = useState([] as any);
   const [newArrivalsLoading, setNewArrivalsLoading] = useState(true);
   const [featureLoading, setFeatureLoading] = useState(true);
 
@@ -31,7 +33,9 @@ export default function Home() {
     if (!allImages || allImages.length === 0) return; // Prevent running on empty data
 
     setNewArrivals(allImages.filter((item) => item.isNew));
-    setFeatureProducts(allImages.filter((item) => !item.isNew));
+    setFeatureProducts(allImages.filter((item) => item.isFeature));
+    setMenProducts(allImages.filter((item) => item.category === "Men"));
+    setWomenProducts(allImages.filter((item) => item.category === "Women"));
   }, [allImages]);
 
   const heroImages = [
@@ -42,7 +46,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen pb-10 md:pb-20">
       {/* Hero Section */}
       <section className="relative h-[647px] mx-auto w-full">
         <Swiper
@@ -76,7 +80,7 @@ export default function Home() {
           ))}
         </Swiper>
 
-        
+
       </section>
 
       <section className="pt-8 px-2 md:px-12 lg:px-24 bg-white">
@@ -103,7 +107,7 @@ export default function Home() {
       </section>
 
       {/* Featured Collection */}
-      {/* <section className="pt-8 px-2 md:px-12 lg:px-24 bg-white">
+      {featureProducts && featureProducts.length > 0 && <section className="pt-8 px-2 md:px-12 lg:px-24 bg-white">
         <div className="flex justify-between items-center mb-4 md:mb-8 lg:mb-8">
           <h2 className="text-md md:text-3xl font-bold">FEATURED COLLECTION</h2>
           <Link
@@ -117,18 +121,66 @@ export default function Home() {
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 md:gap-6 lg:gap-6 xl:gap-6 gap-2">
           {featureProducts && featureProducts.length > 0
             ? featureProducts
-                .slice(0, 4)
-                .map((product: any) => (
-                  <ProductCard key={product.id} product={product} />
-                ))
+              .slice(0, 4)
+              .map((product: any) => (
+                <ProductCard key={product.id} product={product} />
+              ))
             : [...Array(4)].map((_, index) => (
-                <ProductCardSkeleton key={index} />
-              ))}
+              <ProductCardSkeleton key={index} />
+            ))}
         </div>
-      </section> */}
+      </section>}
+
+      {menProducts && menProducts.length > 0 && <section className="pt-8 px-2 md:px-12 lg:px-24 bg-white">
+        <div className="flex justify-between items-center mb-4 md:mb-8 lg:mb-8">
+          <h2 className="text-md md:text-3xl font-bold">MENS COLLECTION</h2>
+          <Link
+            href="/products?product=men"
+            className="flex items-center text-sm font-medium hover:underline"
+          >
+            VIEW ALL <ChevronRight className="h-4 w-4 ml-1" />
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 md:gap-6 lg:gap-6 xl:gap-6 gap-2">
+          {menProducts && menProducts.length > 0
+            ? menProducts
+              .slice(0, 4)
+              .map((product: any) => (
+                <ProductCard key={product.id} product={product} />
+              ))
+            : [...Array(4)].map((_, index) => (
+              <ProductCardSkeleton key={index} />
+            ))}
+        </div>
+      </section>}
+
+      {womenProducts && womenProducts.length > 0 && <section className="pt-8 px-2 md:px-12 lg:px-24 bg-white">
+        <div className="flex justify-between items-center mb-4 md:mb-8 lg:mb-8">
+          <h2 className="text-md md:text-3xl font-bold">WOMEN COLLECTION</h2>
+          <Link
+            href="/products?product=women"
+            className="flex items-center text-sm font-medium hover:underline"
+          >
+            VIEW ALL <ChevronRight className="h-4 w-4 ml-1" />
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 md:gap-6 lg:gap-6 xl:gap-6 gap-2">
+          {womenProducts && womenProducts.length > 0
+            ? menProducts
+              .slice(0, 4)
+              .map((product: any) => (
+                <ProductCard key={product.id} product={product} />
+              ))
+            : [...Array(4)].map((_, index) => (
+              <ProductCardSkeleton key={index} />
+            ))}
+        </div>
+      </section>}
 
       {/* Brand Story */}
-      <section className="py-16 px-6 md:px-12 lg:px-24 bg-gray-50">
+      {/* <section className="py-16 px-6 md:px-12 lg:px-24 bg-gray-50">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="max-w-lg">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -162,10 +214,10 @@ export default function Home() {
             />
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Categories */}
-      <section className="py-16 px-6 md:px-12 lg:px-24 bg-white">
+      {/* <section className="py-16 px-6 md:px-12 lg:px-24 bg-white">
         <h2 className="text-xl md:text-3xl font-bold mb-8 text-center">
           SHOP BY CATEGORY
         </h2>
@@ -190,10 +242,11 @@ export default function Home() {
             </Link>
           ))}
         </div>
-      </section>
+      </section> */}
+      
 
       {/* Newsletter */}
-      <section className="py-16 px-6 md:px-12 lg:px-24 bg-black text-white">
+      {/* <section className="py-16 px-6 md:px-12 lg:px-24 bg-black text-white">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
             JOIN THE FUNCY FABRIC FAMILY
@@ -222,7 +275,7 @@ export default function Home() {
             </Button>
           </form>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

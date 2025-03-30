@@ -65,7 +65,7 @@ export default function ProductsPageContent() {
         setFilterProduct(allProducts.filter((item) => item.isNew));
         break;
       case "feature":
-        setFilterProduct(allProducts.filter((item) => !item.isNew));
+        setFilterProduct(allProducts.filter((item) => item.isFeature));
         break;
       case "men":
         setFilterProduct(allProducts.filter((item) => item.category === "Men"));

@@ -120,7 +120,7 @@ export default function ProductPage({ params }: { params: { id: any } }) {
             <p className="text-2xl font-bold">{product?.discountPrice}</p>
           </div> */}
           <div>
-            <h1 className="text-3xl font-bold mb-2">{product?.name}</h1>
+            <h1 className="md:text-3xl text-2xl font-bold mb-2">{product?.name}</h1>
             <p className="text-gray-500 mb-4">{product?.category}</p>
             <div className="flex items-center space-x-3">
               <p className="text-2xl font-bold text-red-500">
@@ -301,7 +301,7 @@ export default function ProductPage({ params }: { params: { id: any } }) {
 
       <div className="py-12 border-t">
         <h2 className="text-2xl font-bold mb-8">You May Also Like</h2>
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-6">
           {product?.youCanAlsoLike?.map((likedProduct: any) => (
             <Link
               href={`/products/${likedProduct.id}`}
